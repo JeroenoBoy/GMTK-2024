@@ -1,0 +1,15 @@
+{
+  "name": "jutils",
+  "displayName": "JUtils",
+  "version": "1.11.0",
+  "description": "A unity utilities library, this contains many handy extensions, components and data structures with custom editors",
+  "license": "LGPL-3.0",
+  "author": {
+    "name": "Jeroen van de Geest",
+    "url": "https://jeroenvdg.com"
+  },
+  "dependencies": {
+    "com.unity.editorcoroutines": "1.0.0"
+  },
+  "hideInEditor": false
+}
