@@ -1,1 +1,34 @@
-{}
+{
+    "name": "Mouse control",
+    "maps": [
+        {
+            "name": "build",
+            "id": "17954d09-d06d-4fb6-8e07-97beec868d18",
+            "actions": [
+                {
+                    "name": "mous",
+                    "type": "Button",
+                    "id": "d65bf4eb-0970-4620-bb21-0e9813c593e5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3c1f64a5-7a88-42be-892f-840e18aa0697",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "mous",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
