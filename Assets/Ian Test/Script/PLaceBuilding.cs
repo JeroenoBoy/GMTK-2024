@@ -8,6 +8,7 @@ public class PLaceBuilding : MonoBehaviour
 {
     [SerializeField] private GameObject _placeBuilding;
 
+    public GameObject _chosenObject;
     public Vector3 _screenPostion;
     public Vector3 _worldPostion;
     Plane plane = new Plane(Vector3.forward, 0);
@@ -38,9 +39,21 @@ public class PLaceBuilding : MonoBehaviour
         //_placeBuilding.transform.position = _muisPostie;
     }
 
-    public void HandleMouseLeft(InputAction.CallbackContext ctx)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("clickt");
+        gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        Debug.Log(collision.gameObject.name);
     }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        gameObject.GetComponent<SpriteRenderer>().color = Color.green;
     }
+
+    public void HandleMouseLeft(InputAction.CallbackContext ctx)
+    {
+        Instantiate(_chosenObject, _worldPostion, Quaternion.Euler(0, 0, 0), _parentobject.transform);
+        
+    }
+
+}
