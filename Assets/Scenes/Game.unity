@@ -1865,7 +1865,8 @@ MonoBehaviour:
   _wiggleIntensity: 0.5
   _wiggleFrequency: 0.5
   _maxDistanceBehind: 30
-  _pivotMoveSpeed: 1
+  _pivotSmoothTime: 3
+  _pivotMoveSpeed: 5
 --- !u!4 &1968770941
 Transform:
   m_ObjectHideFlags: 0
