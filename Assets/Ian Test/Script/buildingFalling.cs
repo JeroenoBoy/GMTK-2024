@@ -1,38 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
 
 public class buildingFalling : MonoBehaviour
 {
+    [SerializeField] private float _maxTime = 1;
+
+    public new Collider2D collider { get; private set; }
+
     private Rigidbody2D _RB2D;
-    [SerializeField] private float _maxTime = 3;
     private float _time;
-    
-    void Start()
+
+    private void Awake()
     {
-        _RB2D = gameObject.GetComponent<Rigidbody2D>();
-        _time = _maxTime;
+        collider = GetComponent<Collider2D>();
+        _RB2D = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-
+        _time = _maxTime;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(_RB2D.velocity.magnitude < 0.2f)
-        {
+        if (_RB2D.velocity.magnitude < 0.2f) {
             _time -= Time.deltaTime;
-            if(_time <0f)
-            {
+            if (_time < 0f) {
+                EventBus.instance.onBuildingSettle?.Invoke(this);
                 Destroy(_RB2D);
                 Destroy(this);
             }
-        }
-        else
-        {
+        } else {
             _time = _maxTime;
         }
     }

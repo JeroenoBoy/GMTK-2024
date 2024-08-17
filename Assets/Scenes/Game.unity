@@ -267,7 +267,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!114 &399543939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -737,7 +737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _godCube: {fileID: 527224435408164452, guid: b4f04ee1dfe968d41806f8693ee71678, type: 3}
-  _spawnInterval: 1
+  _spawnInterval: 5
   _spawnRows: 10
   _spawnPadding: 1
   _spawnHeight: 15
