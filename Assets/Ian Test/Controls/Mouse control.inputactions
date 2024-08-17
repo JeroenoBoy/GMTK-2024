@@ -11,7 +11,7 @@
                     "id": "d65bf4eb-0970-4620-bb21-0e9813c593e5",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 }
             ],
