@@ -7,7 +7,6 @@ namespace DefaultNamespace
 {
     public class BuildingFallOnLost : MonoBehaviour
     {
-        [SerializeField] private float _destroyChance = 10;
         [SerializeField] private MinMax _delay;
 
         private void OnEnable()
@@ -28,14 +27,10 @@ namespace DefaultNamespace
         private IEnumerator OutOfBalanceRoutine()
         {
             yield return new WaitForSeconds(_delay.Random());
-            if (Random.Range(0, 100f) < _destroyChance) {
-                Destroy(gameObject);
-            } else {
-                gameObject.AddComponent<Rigidbody2D>();
+            gameObject.AddComponent<Rigidbody2D>();
 
-                if (Random.Range(0f, 100f) > 70f) {
-                    GetComponent<Collider2D>().enabled = false;
-                }
+            if (Random.Range(0f, 100f) > 50f) {
+                GetComponent<Collider2D>().enabled = false;
             }
         }
     }
