@@ -33,7 +33,7 @@ public class buildingFalling : MonoBehaviour
             collider.enabled = false;
         }
 
-        if (transform.position.y < 0) {
+        if (transform.position.y < -10) {
             Destroy(gameObject);
         }
     }
