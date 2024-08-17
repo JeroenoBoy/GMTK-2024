@@ -48,7 +48,7 @@ public class BalancingBeam : MonoBehaviour
         }
 
         Quaternion targetRotation = Quaternion.Euler(0, 0, angle + offsetMovement);
-        Quaternion newRotation = Quaternion.Lerp(transform.rotation, targetRotation, 1 - Mathf.Exp(-10 * Time.deltaTime));
+        Quaternion newRotation = Quaternion.Slerp(transform.rotation, targetRotation, 1 - Mathf.Exp(-10 * Time.deltaTime));
         transform.rotation = newRotation;
     }
 

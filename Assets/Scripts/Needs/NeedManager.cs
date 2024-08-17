@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using JUtils;
-using UnityEngine;
 
 
 public class NeedManager : SingletonBehaviour<NeedManager>
@@ -42,8 +41,6 @@ public class NeedManager : SingletonBehaviour<NeedManager>
 
         bool wasUnhappy = needData.isUnhappy;
         float percentage = (float)needData.required / needData.consumed;
-
-        Debug.Log($"{percentage} {1 + need.percentage.max / 100f} {1 - need.percentage.min / 100f}");
 
         needData.hasTooMuch = percentage > 1 + need.percentage.max / 100f;
         needData.hasTooPhew = percentage < 1 - need.percentage.min / 100f;
