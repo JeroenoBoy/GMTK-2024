@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using DefaultNamespace.UI;
 using JUtils;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -11,7 +12,7 @@ public class PLaceBuilding : SingletonBehaviour<PLaceBuilding>
     public Vector3 _screenPostion;
     public Vector3 _worldPostion;
     private Plane plane = new(Vector3.forward, 0);
-    private bool _kanNietPlaatssen = false;
+    private bool _kanNietPlaatssen;
 
     [SerializeField] private GameObject _parentobject;
     private bool _isClicked = true;
@@ -58,6 +59,14 @@ public class PLaceBuilding : SingletonBehaviour<PLaceBuilding>
 
     private void Update()
     {
+        if (UIManager.instance.isOverUI) {
+            _sR.enabled = false;
+            _isClicked = false;
+            return;
+        }
+
+        _sR.enabled = true;
+
         _screenPostion = Mouse.current.position.ReadValue();
 
         Ray ray = Camera.main.ScreenPointToRay(_screenPostion);
@@ -69,8 +78,7 @@ public class PLaceBuilding : SingletonBehaviour<PLaceBuilding>
         transform.position = _worldPostion;
         _timer -= Time.deltaTime;
         if (_timer < 0f) {
-            if (_isClicked == true) {
-                _isClicked = false;
+            if (_isClicked) {
                 _timer = .5f;
                 if (!_kanNietPlaatssen) {
                     GameObject building = Instantiate(_sellectedObject, _worldPostion, Quaternion.Euler(0, 0, 0), _parentobject.transform);
@@ -79,6 +87,8 @@ public class PLaceBuilding : SingletonBehaviour<PLaceBuilding>
                 }
             }
         }
+
+        _isClicked = false;
     }
 
     public void HandleMouseLeft(InputAction.CallbackContext ctx)

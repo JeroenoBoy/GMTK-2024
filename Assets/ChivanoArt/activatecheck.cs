@@ -1,14 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UIElements;
+
 
 public class activatecheck : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-    [SerializeField] GameObject check;
- 
-   
+    [SerializeField] private GameObject check;
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -16,14 +12,12 @@ public class activatecheck : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     }
 
     public void OnPointerEnter(PointerEventData eventData)
-    {        
+    {
         check.SetActive(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
-    {        
+    {
         check.SetActive(false);
     }
-
-    
 }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8715317144417559519}
   - component: {fileID: -6917696208180658248}
   m_Layer: 0
-  m_Name: LivingRoom
+  m_Name: Houses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,18 +48,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _needs:
+  <needs>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: 68c8032aded13c74db0569dcb7f9a6c5,
       type: 2}
     <value>k__BackingField:
-      _min: 2
-      _max: 3
-  _provides:
+      _min: 0
+      _max: 0
   - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
       type: 2}
     <value>k__BackingField:
-      _min: 5
-      _max: 8
+      _min: 0
+      _max: 0
+  - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
+      type: 2}
+    <value>k__BackingField:
+      _min: 0
+      _max: 0
+  <provides>k__BackingField:
+  - <need>k__BackingField: {fileID: 11400000, guid: 68c8032aded13c74db0569dcb7f9a6c5,
+      type: 2}
+    <value>k__BackingField:
+      _min: 0
+      _max: 0
+  - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
+      type: 2}
+    <value>k__BackingField:
+      _min: 0
+      _max: 0
 --- !u!212 &-902373836476814859
 SpriteRenderer:
   m_ObjectHideFlags: 0

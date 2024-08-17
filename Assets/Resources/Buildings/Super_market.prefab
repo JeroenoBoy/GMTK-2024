@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7236939815380922146}
   - component: {fileID: 3024819473392389746}
   m_Layer: 0
-  m_Name: Supermarket
+  m_Name: Super_market
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,18 +48,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _needs:
+  <needs>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
       type: 2}
     <value>k__BackingField:
-      _min: 5
+      _min: 3
       _max: 5
-  _provides:
+  <provides>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: 68c8032aded13c74db0569dcb7f9a6c5,
       type: 2}
     <value>k__BackingField:
-      _min: 10
-      _max: 20
+      _min: 20
+      _max: 25
 --- !u!212 &-902373836476814859
 SpriteRenderer:
   m_ObjectHideFlags: 0
