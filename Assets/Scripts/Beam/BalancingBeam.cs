@@ -1,4 +1,3 @@
-using DefaultNamespace;
 using UnityEngine;
 
 
@@ -27,7 +26,7 @@ public class BalancingBeam : MonoBehaviour
     {
         float offsetMovement = (Mathf.PerlinNoise(0, Time.time * _wiggleFrequency) * 2 - 1) * _wiggleIntensity;
 
-        float massPercentage = _containerRight.currentWeight - _containerLeft.currentWeight / _maxWeightDifference;
+        float massPercentage = (_containerRight.currentWeight - _containerLeft.currentWeight) / _maxWeightDifference;
 
         float maxAngle = Mathf.Atan2(_maxSway, _currentHeight) * Mathf.Rad2Deg;
         maxAngle = Mathf.Min(maxAngle, _maxAngle);
