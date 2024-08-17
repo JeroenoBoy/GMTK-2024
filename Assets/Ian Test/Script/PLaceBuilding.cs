@@ -29,9 +29,7 @@ public class PLaceBuilding : MonoBehaviour
         {
             _worldPostion = ray.GetPoint(distance);
         }
-        // _screenPostion.z = Camera.main.nearClipPlane -5;
 
-        //_worldPostion = Camera.main.ScreenToWorldPoint(_screenPostion);
         transform.position = _worldPostion;
         _timer -= Time.deltaTime;
         if(_timer < 0f)
@@ -53,7 +51,7 @@ public class PLaceBuilding : MonoBehaviour
 
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
+    {   
         gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         _kanNietPlaatsen ++;
     }
@@ -65,8 +63,9 @@ public class PLaceBuilding : MonoBehaviour
         {
             gameObject.GetComponent<SpriteRenderer>().color = Color.green;
         }
-       
     }
+
+
 
     public void HandleMouseLeft(InputAction.CallbackContext ctx)
     {
@@ -75,5 +74,4 @@ public class PLaceBuilding : MonoBehaviour
             _isClicked = true;
         }
     }
-
 }
