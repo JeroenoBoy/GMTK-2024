@@ -172,7 +172,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.014057159, y: -0.010051608}
@@ -314,7 +314,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 645775536313cbd4d99ce512510cab09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _placeBuilding: {fileID: 32604733}
   _chosenObject: {fileID: 2650470166000152577, guid: 7399f0e66e031fe4ab86c049d294215b,
     type: 3}
   _screenPostion: {x: 0, y: 0, z: 0}
@@ -346,7 +345,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!1 &460547014
 GameObject:
   m_ObjectHideFlags: 0

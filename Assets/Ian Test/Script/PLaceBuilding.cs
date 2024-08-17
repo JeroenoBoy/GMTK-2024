@@ -53,7 +53,7 @@ public class PLaceBuilding : MonoBehaviour
 
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
+    {   
         gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         _kanNietPlaatsen ++;
     }
@@ -65,7 +65,11 @@ public class PLaceBuilding : MonoBehaviour
         {
             gameObject.GetComponent<SpriteRenderer>().color = Color.green;
         }
-       
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Debug.Log(collision);
     }
 
     public void HandleMouseLeft(InputAction.CallbackContext ctx)
@@ -75,5 +79,4 @@ public class PLaceBuilding : MonoBehaviour
             _isClicked = true;
         }
     }
-
 }
