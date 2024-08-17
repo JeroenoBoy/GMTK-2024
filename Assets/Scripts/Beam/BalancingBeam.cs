@@ -1,9 +1,10 @@
+using JUtils;
 using UnityEngine;
 
 
 public class BalancingBeam : MonoBehaviour
 {
-    [SerializeField] private Transform _beamTransform;
+    [SerializeField] private Transform _directParent;
     [SerializeField] private BalancingContainer _containerLeft;
     [SerializeField] private BalancingContainer _containerRight;
 
@@ -17,8 +18,15 @@ public class BalancingBeam : MonoBehaviour
     [SerializeField] private float _wiggleIntensity;
     [SerializeField] private float _wiggleFrequency;
 
+    [Header("Moving of pivot")]
+    [SerializeField] private float _maxDistanceBehind;
+    [SerializeField] private float _pivotMoveSpeed;
+
+    public float unbalancedPercentage => (_containerRight.currentWeight - _containerLeft.currentWeight) / _maxWeightDifference;
+
     private float _leftMass;
     private float _rightMass;
+    private float _smoothVel;
 
     private bool _didGoOutOfBalance = false;
 
@@ -34,11 +42,16 @@ public class BalancingBeam : MonoBehaviour
 
     private void Update()
     {
+        float currentY = transform.position.y;
+        float targetY = Mathf.Max(currentHeight - _maxDistanceBehind, currentY);
+        float newY = Mathf.SmoothDamp(currentY, targetY, ref _smoothVel, _pivotMoveSpeed * Time.deltaTime);
+        transform.position = transform.position.With(y: newY);
+        _directParent.position = Vector3.down * newY;
+
         float offsetMovement = (Mathf.PerlinNoise(0, Time.time * _wiggleFrequency) * 2 - 1) * _wiggleIntensity;
+        float massPercentage = unbalancedPercentage;
 
-        float massPercentage = (_containerRight.currentWeight - _containerLeft.currentWeight) / _maxWeightDifference;
-
-        float maxAngle = Mathf.Atan2(_maxSway, currentHeight) * Mathf.Rad2Deg;
+        float maxAngle = Mathf.Atan2(_maxSway, currentHeight - transform.position.y) * Mathf.Rad2Deg;
         maxAngle = Mathf.Min(maxAngle, _maxAngle);
         float angle = massPercentage * maxAngle;
 
