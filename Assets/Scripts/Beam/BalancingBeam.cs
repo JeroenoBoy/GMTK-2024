@@ -20,6 +20,7 @@ public class BalancingBeam : MonoBehaviour
 
     [Header("Moving of pivot")]
     [SerializeField] private float _maxDistanceBehind;
+    [SerializeField] private float _pivotSmoothTime;
     [SerializeField] private float _pivotMoveSpeed;
 
     public float unbalancedPercentage => (_containerRight.currentWeight - _containerLeft.currentWeight) / _maxWeightDifference;
@@ -44,9 +45,9 @@ public class BalancingBeam : MonoBehaviour
     {
         float currentY = transform.position.y;
         float targetY = Mathf.Max(currentHeight - _maxDistanceBehind, currentY);
-        float newY = Mathf.SmoothDamp(currentY, targetY, ref _smoothVel, _pivotMoveSpeed * Time.deltaTime);
+        float newY = Mathf.SmoothDamp(currentY, targetY, ref _smoothVel, _pivotMoveSpeed, _pivotMoveSpeed);
         transform.position = transform.position.With(y: newY);
-        _directParent.position = Vector3.down * newY;
+        _directParent.localPosition = Vector3.down * newY;
 
         float offsetMovement = (Mathf.PerlinNoise(0, Time.time * _wiggleFrequency) * 2 - 1) * _wiggleIntensity;
         float massPercentage = unbalancedPercentage;
