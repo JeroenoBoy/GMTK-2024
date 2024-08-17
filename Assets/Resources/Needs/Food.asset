@@ -18,3 +18,5 @@ MonoBehaviour:
   <percentage>k__BackingField:
     _min: -5
     _max: 200
+  <tooLow>k__BackingField: There is not Enough food!
+  <tooHigh>k__BackingField: There is too much food!
