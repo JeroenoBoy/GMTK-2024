@@ -10,14 +10,10 @@ public class buildingFalling : MonoBehaviour
     private Rigidbody2D _RB2D;
     private float _time;
 
-    private void Awake()
+    private void Start()
     {
         collider = GetComponent<Collider2D>();
         _RB2D = GetComponent<Rigidbody2D>();
-    }
-
-    private void Start()
-    {
         _time = _maxTime;
     }
 
@@ -26,9 +22,9 @@ public class buildingFalling : MonoBehaviour
         if (_RB2D.velocity.magnitude < 0.2f) {
             _time -= Time.deltaTime;
             if (_time < 0f) {
-                EventBus.instance.onBuildingSettle?.Invoke(this);
                 Destroy(_RB2D);
                 Destroy(this);
+                EventBus.instance.onBuildingSettle?.Invoke(this);
             }
         } else {
             _time = _maxTime;
