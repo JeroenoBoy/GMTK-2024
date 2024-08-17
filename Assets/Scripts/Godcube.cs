@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -9,14 +10,12 @@ namespace DefaultNamespace
         [SerializeField] private float _acceleration;
         [SerializeField] private float _height = 0.5f;
 
-        private void Start() { }
-
-        public void StartMoving(Vector3 startPosition, Vector3 endPosition)
+        public void StartMoving(Vector3 startPosition, Vector3 endPosition, Action onCubeLand)
         {
-            StartCoroutine(MovingRoutine(startPosition, endPosition));
+            StartCoroutine(MovingRoutine(startPosition, endPosition, onCubeLand));
         }
 
-        private IEnumerator MovingRoutine(Vector3 startPosition, Vector3 targetPosition)
+        private IEnumerator MovingRoutine(Vector3 startPosition, Vector3 targetPosition, Action onCubeLand)
         {
             transform.localPosition = startPosition;
             Vector3 moveDir = Vector3.down;
@@ -30,6 +29,7 @@ namespace DefaultNamespace
             }
 
             transform.localPosition = targetPosition;
+            onCubeLand?.Invoke();
         }
     }
 }

@@ -25,15 +25,15 @@ public class God : BalancingContainer
         if (_spawnTimer > 0) return;
         _spawnTimer += _spawnInterval;
 
-        Vector3 targetPosition = Vector3.left * (_spawnCount % _spawnRows * _spawnPadding - _spawnPadding * .5f) + Vector3.up * (Mathf.Floor((float)_spawnCount / _spawnRows) * _spawnPadding);
+        Vector3 targetPosition = Vector3.left * (_spawnCount % _spawnRows * _spawnPadding - _spawnRows * _spawnPadding * .5f)
+            + Vector3.up * (Mathf.Floor((float)_spawnCount / _spawnRows) * _spawnPadding);
         Vector3 spawnPosition = targetPosition + Vector3.up * _spawnHeight;
         Godcube instance = Instantiate(_godCube, Vector3.zero, Quaternion.identity);
 
         instance.transform.parent = transform;
         instance.transform.Reset();
-        instance.StartMoving(spawnPosition, targetPosition);
+        instance.StartMoving(spawnPosition, targetPosition, () => currentWeight += instance.weight);
 
-        currentWeight += instance.weight;
         _spawnCount++;
     }
 }
