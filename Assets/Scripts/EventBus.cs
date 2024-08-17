@@ -1,10 +1,12 @@
 using System;
 using JUtils;
 
-namespace DefaultNamespace
+
+public class EventBus : AutoSingletonBehaviour<EventBus>
 {
-    public class EventBus : AutoSingletonBehaviour<EventBus>
-    {
-        public Action onOutOfBalance;
-    }
+    public Action onOutOfBalance;
+
+    public Action<Need> onNeedAdded;
+    public Action<Need> onNeedBalanceLost;
+    public Action<Need> onNeedBalanceRegained;
 }
