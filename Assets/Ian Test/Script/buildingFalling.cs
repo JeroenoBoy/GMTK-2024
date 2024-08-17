@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class buildingFalling : MonoBehaviour
 {
-    [SerializeField] private float _maxTime = 0.05f;
+    [SerializeField] private float _maxTime = 2f;
 
     public new Collider2D collider { get; private set; }
 
