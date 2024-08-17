@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class NeedProvider : MonoBehaviour
 {
-    [SerializeField] private NeedPair[] _needs;
-    [SerializeField] private NeedPair[] _provides;
+    [field: SerializeField] public NeedPair[] needs { get; private set; }
+    [field: SerializeField] public NeedPair[] provides { get; private set; }
 
     private int[] _needValues;
     private int[] _providesValues;
@@ -15,18 +15,18 @@ public class NeedProvider : MonoBehaviour
     {
         NeedManager needManager = NeedManager.instance;
 
-        _needValues = new int[_needs.Length];
-        _providesValues = new int[_provides.Length];
+        _needValues = new int[needs.Length];
+        _providesValues = new int[provides.Length];
 
-        for (int i = 0; i < _needs.Length; i++) {
-            NeedPair pair = _needs[i];
+        for (int i = 0; i < needs.Length; i++) {
+            NeedPair pair = needs[i];
             int amount = pair.value.Random();
             _needValues[i] = amount;
             needManager.ConsumeNeed(pair.need, amount);
         }
 
-        for (int i = 0; i < _provides.Length; i++) {
-            NeedPair pair = _provides[i];
+        for (int i = 0; i < provides.Length; i++) {
+            NeedPair pair = provides[i];
             int amount = pair.value.Random();
             _providesValues[i] = amount;
             needManager.AddNeed(pair.need, amount);
@@ -37,13 +37,13 @@ public class NeedProvider : MonoBehaviour
     {
         NeedManager needManager = NeedManager.instance;
 
-        for (int i = 0; i < _needs.Length; i++) {
-            NeedPair pair = _needs[i];
+        for (int i = 0; i < needs.Length; i++) {
+            NeedPair pair = needs[i];
             needManager.ConsumeNeed(pair.need, -_needValues[i]);
         }
 
-        for (int i = 0; i < _provides.Length; i++) {
-            NeedPair pair = _provides[i];
+        for (int i = 0; i < provides.Length; i++) {
+            NeedPair pair = provides[i];
             needManager.AddNeed(pair.need, -_providesValues[i]);
         }
     }
