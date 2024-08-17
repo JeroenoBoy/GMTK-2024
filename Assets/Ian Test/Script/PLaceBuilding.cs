@@ -6,15 +6,17 @@ using UnityEngine.InputSystem;
 
 public class PLaceBuilding : MonoBehaviour
 {
-    [SerializeField] private GameObject _placeBuilding;
 
     public GameObject _chosenObject;
     public Vector3 _screenPostion;
     public Vector3 _worldPostion;
     Plane plane = new Plane(Vector3.forward, 0);
-    private bool _kanNietPlaatsen = false;
+    private int _kanNietPlaatsen = 0;
 
     [SerializeField] private GameObject _parentobject;
+    private bool _isClicked = true;
+
+    private float _timer;
 
     private void Update()
     {
@@ -31,34 +33,47 @@ public class PLaceBuilding : MonoBehaviour
 
         //_worldPostion = Camera.main.ScreenToWorldPoint(_screenPostion);
         transform.position = _worldPostion;
-
-        // Camera.main.ScreenToViewportPoint(Input.mousePosition)
-
-        //Camera.main.screen
-        
-        
-        //_placeBuilding.transform.position = _muisPostie;
+        _timer -= Time.deltaTime;
+        if(_timer < 0f)
+        {
+            if(_isClicked == true)
+            {
+                _isClicked = false;
+                _timer = 2f;
+                if (_kanNietPlaatsen == 0 )
+                {
+                    GameObject building = Instantiate(_chosenObject, _worldPostion, Quaternion.Euler(0, 0, 0), _parentobject.transform);
+                    building.AddComponent<buildingFalling>();
+                    building.AddComponent<Rigidbody2D>();
+                   
+                }
+            }
+        }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-        Debug.Log(collision.gameObject.name);
-        _kanNietPlaatsen = true;
+        _kanNietPlaatsen ++;
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        gameObject.GetComponent<SpriteRenderer>().color = Color.green;
-        _kanNietPlaatsen = false;
+        _kanNietPlaatsen--;
+        if (_kanNietPlaatsen == 0)
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+        }
+       
     }
 
     public void HandleMouseLeft(InputAction.CallbackContext ctx)
     {
-        if(_kanNietPlaatsen == false)
+        if(ctx.phase == InputActionPhase.Started)
         {
-            Instantiate(_chosenObject, _worldPostion, Quaternion.Euler(0, 0, 0), _parentobject.transform);
-        }   
+            _isClicked = true;
+        }
     }
 
 }
