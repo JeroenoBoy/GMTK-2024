@@ -12,6 +12,7 @@ public class PLaceBuilding : MonoBehaviour
     public Vector3 _screenPostion;
     public Vector3 _worldPostion;
     Plane plane = new Plane(Vector3.forward, 0);
+    private bool _kanNietPlaatsen = false;
 
     [SerializeField] private GameObject _parentobject;
 
@@ -43,17 +44,21 @@ public class PLaceBuilding : MonoBehaviour
     {
         gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         Debug.Log(collision.gameObject.name);
+        _kanNietPlaatsen = true;
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
         gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+        _kanNietPlaatsen = false;
     }
 
     public void HandleMouseLeft(InputAction.CallbackContext ctx)
     {
-        Instantiate(_chosenObject, _worldPostion, Quaternion.Euler(0, 0, 0), _parentobject.transform);
-        
+        if(_kanNietPlaatsen == false)
+        {
+            Instantiate(_chosenObject, _worldPostion, Quaternion.Euler(0, 0, 0), _parentobject.transform);
+        }   
     }
 
 }
