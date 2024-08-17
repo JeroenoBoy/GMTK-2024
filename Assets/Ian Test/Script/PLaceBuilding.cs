@@ -1,16 +1,16 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections.Generic;
 
 
 public class PLaceBuilding : MonoBehaviour
 {
-    public  List<GameObject> _buildingObjects = new List<GameObject>();
-    private GameObject _sellectedObject; 
+    public List<GameObject> _buildingObjects = new();
+    private GameObject _sellectedObject;
     public Vector3 _screenPostion;
     public Vector3 _worldPostion;
     private Plane plane = new(Vector3.forward, 0);
-    private int _kanNietPlaatsen = 0;
+    private bool _kanNietPlaatssen = false;
 
     [SerializeField] private GameObject _parentobject;
     private bool _isClicked = true;
@@ -28,6 +28,24 @@ public class PLaceBuilding : MonoBehaviour
         _sellectedObject = _buildingObjects[0];
         _sR.sprite = _sellectedObject.GetComponent<SpriteRenderer>().sprite;
         _bC2D.size = _sellectedObject.GetComponent<BoxCollider2D>().size;
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (!_kanNietPlaatssen) {
+            _sR.color = Color.Lerp(Color.white, Color.red, .5f);
+        }
+
+        _kanNietPlaatssen = true;
+    }
+
+    private void FixedUpdate()
+    {
+        if (!_kanNietPlaatssen) {
+            _sR.color = Color.white;
+        } else {
+            _kanNietPlaatssen = false;
+        }
     }
 
     private void Update()
@@ -48,7 +66,7 @@ public class PLaceBuilding : MonoBehaviour
             if (_isClicked == true) {
                 _isClicked = false;
                 _timer = .5f;
-                if (_kanNietPlaatsen == 0) {
+                if (!_kanNietPlaatssen) {
                     GameObject building = Instantiate(_sellectedObject, _worldPostion, Quaternion.Euler(0, 0, 0), _parentobject.transform);
                     building.AddComponent<buildingFalling>();
                     building.AddComponent<Rigidbody2D>();
@@ -59,40 +77,18 @@ public class PLaceBuilding : MonoBehaviour
 
     private void ChangeObject()
     {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
-        {
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
             _sellectedObject = _buildingObjects[0];
             _sR.sprite = _sellectedObject.GetComponent<SpriteRenderer>().sprite;
             gameObject.GetComponent<BoxCollider2D>().size = _sellectedObject.GetComponent<BoxCollider2D>().size;
-
-        }
-        else if(Input.GetKeyDown(KeyCode.Alpha2))
-        {
+        } else if (Input.GetKeyDown(KeyCode.Alpha2)) {
             _sellectedObject = _buildingObjects[1];
             _sR.sprite = _sellectedObject.GetComponent<SpriteRenderer>().sprite;
             gameObject.GetComponent<BoxCollider2D>().size = _sellectedObject.GetComponent<BoxCollider2D>().size;
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
+        } else if (Input.GetKeyDown(KeyCode.Alpha3)) {
             _sellectedObject = _buildingObjects[2];
             _sR.sprite = _sellectedObject.GetComponent<SpriteRenderer>().sprite;
             gameObject.GetComponent<BoxCollider2D>().size = _sellectedObject.GetComponent<BoxCollider2D>().size;
-        }
-
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-        _kanNietPlaatsen++;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        _kanNietPlaatsen--;
-        if (_kanNietPlaatsen == 0) {
-            gameObject.GetComponent<SpriteRenderer>().color = Color.green;
         }
     }
 
