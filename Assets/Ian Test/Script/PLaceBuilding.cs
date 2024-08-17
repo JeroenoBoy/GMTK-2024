@@ -1,9 +1,10 @@
 using System.Collections.Generic;
+using JUtils;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-public class PLaceBuilding : MonoBehaviour
+public class PLaceBuilding : SingletonBehaviour<PLaceBuilding>
 {
     public List<GameObject> _buildingObjects = new();
     private GameObject _sellectedObject;
@@ -19,6 +20,13 @@ public class PLaceBuilding : MonoBehaviour
 
     private BoxCollider2D _bC2D;
     private SpriteRenderer _sR;
+
+    public void SelectObject(GameObject obj)
+    {
+        _sellectedObject = obj;
+        _sR.sprite = _sellectedObject.GetComponent<SpriteRenderer>().sprite;
+        gameObject.GetComponent<BoxCollider2D>().size = _sellectedObject.GetComponent<BoxCollider2D>().size;
+    }
 
     private void Start()
     {
@@ -58,8 +66,6 @@ public class PLaceBuilding : MonoBehaviour
             _worldPostion = ray.GetPoint(distance);
         }
 
-        ChangeObject();
-
         transform.position = _worldPostion;
         _timer -= Time.deltaTime;
         if (_timer < 0f) {
@@ -72,23 +78,6 @@ public class PLaceBuilding : MonoBehaviour
                     building.AddComponent<Rigidbody2D>();
                 }
             }
-        }
-    }
-
-    private void ChangeObject()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {
-            _sellectedObject = _buildingObjects[0];
-            _sR.sprite = _sellectedObject.GetComponent<SpriteRenderer>().sprite;
-            gameObject.GetComponent<BoxCollider2D>().size = _sellectedObject.GetComponent<BoxCollider2D>().size;
-        } else if (Input.GetKeyDown(KeyCode.Alpha2)) {
-            _sellectedObject = _buildingObjects[1];
-            _sR.sprite = _sellectedObject.GetComponent<SpriteRenderer>().sprite;
-            gameObject.GetComponent<BoxCollider2D>().size = _sellectedObject.GetComponent<BoxCollider2D>().size;
-        } else if (Input.GetKeyDown(KeyCode.Alpha3)) {
-            _sellectedObject = _buildingObjects[2];
-            _sR.sprite = _sellectedObject.GetComponent<SpriteRenderer>().sprite;
-            gameObject.GetComponent<BoxCollider2D>().size = _sellectedObject.GetComponent<BoxCollider2D>().size;
         }
     }
 

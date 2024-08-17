@@ -56,7 +56,7 @@ public class BalancingBeam : MonoBehaviour
         maxAngle = Mathf.Min(maxAngle, _maxAngle);
         float angle = massPercentage * maxAngle;
 
-        if (massPercentage > 0 && !_didGoOutOfBalance) {
+        if (Mathf.Abs(massPercentage) > 1 && !_didGoOutOfBalance) {
             _didGoOutOfBalance = true;
             EventBus.instance.onOutOfBalance?.Invoke();
         }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -902373836476814859}
   - component: {fileID: -7024017194419833932}
   - component: {fileID: 7236939815380922146}
+  - component: {fileID: 3024819473392389746}
   m_Layer: 0
   m_Name: Supermarket
   m_TagString: Untagged
@@ -169,3 +170,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <weight>k__BackingField: 20
+--- !u!114 &3024819473392389746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304382771576342832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911e0df83d6047c89ec67f4322e199b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destroyChance: 10
+  _delay:
+    _min: 0
+    _max: 2

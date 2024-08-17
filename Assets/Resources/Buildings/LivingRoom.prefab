@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -902373836476814859}
   - component: {fileID: 2010793304535720163}
   - component: {fileID: 8715317144417559519}
+  - component: {fileID: -6917696208180658248}
   m_Layer: 0
   m_Name: LivingRoom
   m_TagString: Untagged
@@ -51,14 +52,14 @@ MonoBehaviour:
   - <need>k__BackingField: {fileID: 11400000, guid: 68c8032aded13c74db0569dcb7f9a6c5,
       type: 2}
     <value>k__BackingField:
-      _min: 5
-      _max: 8
+      _min: 2
+      _max: 3
   _provides:
   - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
       type: 2}
     <value>k__BackingField:
-      _min: 10
-      _max: 15
+      _min: 5
+      _max: 8
 --- !u!212 &-902373836476814859
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -169,3 +170,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <weight>k__BackingField: 10
+--- !u!114 &-6917696208180658248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304382771576342832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911e0df83d6047c89ec67f4322e199b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destroyChance: 10
+  _delay:
+    _min: 0
+    _max: 2
