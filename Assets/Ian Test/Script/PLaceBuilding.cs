@@ -29,9 +29,7 @@ public class PLaceBuilding : MonoBehaviour
         {
             _worldPostion = ray.GetPoint(distance);
         }
-        // _screenPostion.z = Camera.main.nearClipPlane -5;
 
-        //_worldPostion = Camera.main.ScreenToWorldPoint(_screenPostion);
         transform.position = _worldPostion;
         _timer -= Time.deltaTime;
         if(_timer < 0f)
@@ -67,10 +65,7 @@ public class PLaceBuilding : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        Debug.Log(collision);
-    }
+
 
     public void HandleMouseLeft(InputAction.CallbackContext ctx)
     {
