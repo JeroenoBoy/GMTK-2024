@@ -67,7 +67,7 @@ public class GodNotification : MonoBehaviour
     {
         _messageText.text = godNotificationData.message;
 
-        for (float t = 0; t < 1; t += Time.deltaTime * 2f) {
+        for (float t = 0; t < 1; t += Time.deltaTime * 3f) {
             _parent.localPosition = Vector3.up * Mathf.Lerp(100, -50, t);
             _canvasGroup.alpha = Mathf.Lerp(0, 1, t);
             yield return null;
@@ -75,7 +75,7 @@ public class GodNotification : MonoBehaviour
 
         yield return new WaitForSeconds(godNotificationData.stayTime);
 
-        for (float t = 0; t < 1; t += Time.deltaTime * 2f) {
+        for (float t = 0; t < 1; t += Time.deltaTime * 3f) {
             _parent.localPosition = Vector3.up * Mathf.Lerp(-50, 100, t);
             _canvasGroup.alpha = Mathf.Lerp(1, 0, t);
             yield return null;

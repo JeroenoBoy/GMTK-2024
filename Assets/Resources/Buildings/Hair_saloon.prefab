@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -7024017194419833932}
   - component: {fileID: 7236939815380922146}
   - component: {fileID: 3024819473392389746}
+  - component: {fileID: -8332387303900349836}
   m_Layer: 0
   m_Name: Hair_saloon
   m_TagString: Untagged
@@ -48,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <minWeight>k__BackingField: 500
+  <minWeight>k__BackingField: 600
   <needs>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: 8a19a2705be3de74daf563022f78040d,
       type: 2}
@@ -66,11 +67,6 @@ MonoBehaviour:
     <value>k__BackingField:
       _min: 3
       _max: 5
-  - <need>k__BackingField: {fileID: 11400000, guid: d9ab2fcf0baff6d4cac3def1d3869365,
-      type: 2}
-    <value>k__BackingField:
-      _min: 11
-      _max: 13
 --- !u!212 &-902373836476814859
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -196,3 +192,23 @@ MonoBehaviour:
   _delay:
     _min: 0
     _max: 0.2
+--- !u!114 &-8332387303900349836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304382771576342832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <minWeight>k__BackingField: 700
+  <needs>k__BackingField: []
+  <provides>k__BackingField:
+  - <need>k__BackingField: {fileID: 11400000, guid: d7f242a98c119e648a438e7452dd7df0,
+      type: 2}
+    <value>k__BackingField:
+      _min: 3
+      _max: 5

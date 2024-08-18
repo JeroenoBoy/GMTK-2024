@@ -32,7 +32,7 @@ public class GodWeightCheck : IGodNotificationCheck
 
     public bool CanSee()
     {
-        return God.instance.currentWeight > _weight;
+        return God.instance.currentWeight >= _weight;
     }
 }
 

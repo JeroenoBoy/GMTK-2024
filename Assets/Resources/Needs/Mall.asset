@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b83defba24741469575a626a5af79a3, type: 3}
-  m_Name: Style
+  m_Name: Mall
   m_EditorClassIdentifier: 
-  <name>k__BackingField: Hair Style
-  <color>k__BackingField: {r: 0.5396226, g: 0.3111537, b: 0.22704872, a: 1}
+  <name>k__BackingField: Mall
+  <color>k__BackingField: {r: 0.7132075, g: 0.48743892, b: 0.1870487, a: 1}
   <icon>k__BackingField: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   <margin>k__BackingField:
-    _min: -10
-    _max: 30
-  <tooLow>k__BackingField: The people want a better hairstyle
-  <tooHigh>k__BackingField: The hair saloons have no customers!
+    _min: 0
+    _max: 10000000
+  <tooLow>k__BackingField: Add more walls
+  <tooHigh>k__BackingField: 

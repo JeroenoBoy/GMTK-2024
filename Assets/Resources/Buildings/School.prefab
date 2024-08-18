@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7389337525336173845}
-  - component: {fileID: -2484751406630793374}
   - component: {fileID: -902373836476814859}
   - component: {fileID: -7024017194419833932}
   - component: {fileID: 7236939815380922146}
   - component: {fileID: 3024819473392389746}
+  - component: {fileID: -2484751406630793374}
   m_Layer: 0
   m_Name: School
   m_TagString: Untagged
@@ -36,31 +36,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-2484751406630793374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3304382771576342832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <minWeight>k__BackingField: 400
-  <needs>k__BackingField:
-  - <need>k__BackingField: {fileID: 11400000, guid: 516187de073e7b241b7a8aece420178f,
-      type: 2}
-    <value>k__BackingField:
-      _min: 8
-      _max: 15
-  - <need>k__BackingField: {fileID: 11400000, guid: 38cbb18c787f4874497d5fb43cbc3165,
-      type: 2}
-    <value>k__BackingField:
-      _min: 10
-      _max: 20
-  <provides>k__BackingField: []
 --- !u!212 &-902373836476814859
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -186,3 +161,33 @@ MonoBehaviour:
   _delay:
     _min: 0
     _max: 0.2
+--- !u!114 &-2484751406630793374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304382771576342832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <minWeight>k__BackingField: 400
+  <needs>k__BackingField:
+  - <need>k__BackingField: {fileID: 11400000, guid: 516187de073e7b241b7a8aece420178f,
+      type: 2}
+    <value>k__BackingField:
+      _min: 20
+      _max: 25
+  - <need>k__BackingField: {fileID: 11400000, guid: 38cbb18c787f4874497d5fb43cbc3165,
+      type: 2}
+    <value>k__BackingField:
+      _min: 10
+      _max: 20
+  <provides>k__BackingField:
+  - <need>k__BackingField: {fileID: 11400000, guid: 67fe99a7b984ada45a9723fc625a49ac,
+      type: 2}
+    <value>k__BackingField:
+      _min: 50
+      _max: 80

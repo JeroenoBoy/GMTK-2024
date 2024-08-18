@@ -16,7 +16,10 @@ GameObject:
   - component: {fileID: -2484751406630793374}
   - component: {fileID: -8071498275448605343}
   - component: {fileID: -3491225494726373668}
+  - component: {fileID: 8893171504633741585}
   - component: {fileID: 1912553247980302269}
+  - component: {fileID: 6881012961031492416}
+  - component: {fileID: -277786246009156681}
   m_Layer: 0
   m_Name: Houses
   m_TagString: Untagged
@@ -234,6 +237,25 @@ MonoBehaviour:
       _min: 0
       _max: 0
   <provides>k__BackingField: []
+--- !u!114 &8893171504633741585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304382771576342832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <minWeight>k__BackingField: 0
+  <needs>k__BackingField:
+  - <need>k__BackingField: {fileID: 0}
+    <value>k__BackingField:
+      _min: 0
+      _max: 0
+  <provides>k__BackingField: []
 --- !u!114 &1912553247980302269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,9 +270,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <minWeight>k__BackingField: 500
   <needs>k__BackingField:
-  - <need>k__BackingField: {fileID: 11400000, guid: d9ab2fcf0baff6d4cac3def1d3869365,
+  - <need>k__BackingField: {fileID: 11400000, guid: 38cbb18c787f4874497d5fb43cbc3165,
       type: 2}
     <value>k__BackingField:
       _min: 3
       _max: 5
+  <provides>k__BackingField: []
+--- !u!114 &6881012961031492416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304382771576342832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <minWeight>k__BackingField: 600
+  <needs>k__BackingField:
+  - <need>k__BackingField: {fileID: 0}
+    <value>k__BackingField:
+      _min: 0
+      _max: 0
+  <provides>k__BackingField: []
+--- !u!114 &-277786246009156681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304382771576342832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <minWeight>k__BackingField: 800
+  <needs>k__BackingField:
+  - <need>k__BackingField: {fileID: 11400000, guid: 13f28fe77caf64d4f8c8274c4ee681bc,
+      type: 2}
+    <value>k__BackingField:
+      _min: 2
+      _max: 3
   <provides>k__BackingField: []

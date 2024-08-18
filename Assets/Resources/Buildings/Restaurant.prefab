@@ -48,19 +48,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <minHeight>k__BackingField: 0
+  <minWeight>k__BackingField: 800
   <needs>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
       type: 2}
     <value>k__BackingField:
+      _min: 10
+      _max: 15
+  - <need>k__BackingField: {fileID: 11400000, guid: 778e5e0824a114244a2804e9e8701f76,
+      type: 2}
+    <value>k__BackingField:
+      _min: 20
+      _max: 25
+  - <need>k__BackingField: {fileID: 11400000, guid: 8a19a2705be3de74daf563022f78040d,
+      type: 2}
+    <value>k__BackingField:
       _min: 5
-      _max: 10
+      _max: 8
   <provides>k__BackingField:
+  - <need>k__BackingField: {fileID: 11400000, guid: 13f28fe77caf64d4f8c8274c4ee681bc,
+      type: 2}
+    <value>k__BackingField:
+      _min: 20
+      _max: 25
   - <need>k__BackingField: {fileID: 11400000, guid: 68c8032aded13c74db0569dcb7f9a6c5,
       type: 2}
     <value>k__BackingField:
-      _min: 25
-      _max: 30
+      _min: 5
+      _max: 10
   - <need>k__BackingField: {fileID: 11400000, guid: d7f242a98c119e648a438e7452dd7df0,
       type: 2}
     <value>k__BackingField:

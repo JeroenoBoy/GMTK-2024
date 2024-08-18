@@ -2602,16 +2602,40 @@ MonoBehaviour:
     weight: 100
   - type: 1
     need: {fileID: 11400000, guid: a55ff40a0584f514d9f423debf1ec9f4, type: 2}
-    amount: 10
+    amount: 15
     weight: 200
   - type: 1
     need: {fileID: 11400000, guid: 516187de073e7b241b7a8aece420178f, type: 2}
     amount: 10
     weight: 300
   - type: 1
-    need: {fileID: 11400000, guid: d9ab2fcf0baff6d4cac3def1d3869365, type: 2}
+    need: {fileID: 11400000, guid: 67fe99a7b984ada45a9723fc625a49ac, type: 2}
+    amount: 10
+    weight: 400
+  - type: 1
+    need: {fileID: 11400000, guid: 38cbb18c787f4874497d5fb43cbc3165, type: 2}
     amount: 10
     weight: 500
+  - type: 1
+    need: {fileID: 11400000, guid: d9ab2fcf0baff6d4cac3def1d3869365, type: 2}
+    amount: 10
+    weight: 600
+  - type: 1
+    need: {fileID: 11400000, guid: d7f242a98c119e648a438e7452dd7df0, type: 2}
+    amount: 30
+    weight: 700
+  - type: 1
+    need: {fileID: 11400000, guid: 13f28fe77caf64d4f8c8274c4ee681bc, type: 2}
+    amount: 10
+    weight: 800
+  - type: 1
+    need: {fileID: 11400000, guid: 5564461221e1841419910fdb0a666754, type: 2}
+    amount: 1
+    weight: 900
+  - type: 1
+    need: {fileID: 11400000, guid: eda5e6eb92eccc342a339fe5700f88ec, type: 2}
+    amount: 1
+    weight: 1100
 --- !u!1 &1968770939
 GameObject:
   m_ObjectHideFlags: 0

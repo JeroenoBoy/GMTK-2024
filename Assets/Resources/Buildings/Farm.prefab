@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 3609719373077183923}
   - component: {fileID: -2484751406630793374}
   - component: {fileID: 6226535794887921808}
+  - component: {fileID: 8797005223897814665}
+  - component: {fileID: -5612154461847810578}
   m_Layer: 0
   m_Name: Farm
   m_TagString: Untagged
@@ -187,11 +189,6 @@ MonoBehaviour:
     <value>k__BackingField:
       _min: 5
       _max: 10
-  - <need>k__BackingField: {fileID: 11400000, guid: 38cbb18c787f4874497d5fb43cbc3165,
-      type: 2}
-    <value>k__BackingField:
-      _min: 3
-      _max: 5
   <provides>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: 778e5e0824a114244a2804e9e8701f76,
       type: 2}
@@ -222,4 +219,44 @@ MonoBehaviour:
     <value>k__BackingField:
       _min: 3
       _max: 7
+  <provides>k__BackingField: []
+--- !u!114 &8797005223897814665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304382771576342832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <minWeight>k__BackingField: 500
+  <needs>k__BackingField:
+  - <need>k__BackingField: {fileID: 11400000, guid: 38cbb18c787f4874497d5fb43cbc3165,
+      type: 2}
+    <value>k__BackingField:
+      _min: 5
+      _max: 10
+  <provides>k__BackingField: []
+--- !u!114 &-5612154461847810578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304382771576342832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <minWeight>k__BackingField: 700
+  <needs>k__BackingField:
+  - <need>k__BackingField: {fileID: 11400000, guid: d7f242a98c119e648a438e7452dd7df0,
+      type: 2}
+    <value>k__BackingField:
+      _min: 3
+      _max: 5
   <provides>k__BackingField: []

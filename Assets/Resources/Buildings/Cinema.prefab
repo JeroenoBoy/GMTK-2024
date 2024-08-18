@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <minHeight>k__BackingField: 0
+  <minWeight>k__BackingField: 500
   <needs>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: 778e5e0824a114244a2804e9e8701f76,
       type: 2}
