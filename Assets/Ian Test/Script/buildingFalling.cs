@@ -6,6 +6,7 @@ public class buildingFalling : MonoBehaviour
     [SerializeField] private float _maxTime = 2f;
 
     public new Collider2D collider { get; private set; }
+    public GameObject prefab { get; set; }
 
     private Rigidbody2D _RB2D;
     private Weightable _weight;
