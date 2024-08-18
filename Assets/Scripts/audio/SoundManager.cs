@@ -1,19 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using System;
-using UnityEngine.Audio;
-using UnityEngine;
 using JUtils;
+using UnityEngine;
+
 
 public class SoundManager : SingletonBehaviour<SoundManager>
 {
     public Sound[] _sounds;
+
     // Start is called before the first frame update
-    private void Awake()
+    protected override void Awake()
     {
-        DontDestroyOnLoad(this);
-        foreach (var sound in _sounds)
-        {
+        base.Awake();
+        foreach (Sound sound in _sounds) {
             sound._source = gameObject.AddComponent<AudioSource>();
             sound._source.clip = sound._audioClip;
 
@@ -29,11 +27,10 @@ public class SoundManager : SingletonBehaviour<SoundManager>
         Play("Start");
     }
 
-    public void Play(String name)
+    public void Play(string name)
     {
         Sound s = Array.Find(_sounds, sound => sound._name == name);
-        if (s == null)
-            return;
+        if (s == null) return;
         s._source.Play();
     }
 }
