@@ -29,6 +29,7 @@ public class notification : MonoBehaviour
 
     private void OnEnable()
     {
+        SoundManager.instance.Play("notivacation3");
         EventBus.instance.onNeedBalanceRegained += HandleNeedBalanceRegained;
     }
 

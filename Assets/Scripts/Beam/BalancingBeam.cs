@@ -82,6 +82,7 @@ public class BalancingBeam : SingletonBehaviour<BalancingBeam>
 
     private void ProcessGameOver()
     {
+        SoundManager.instance.Play("Faal");
         _gameDoneTimer += Time.deltaTime / 5;
 
         Quaternion targetRotation = Quaternion.Euler(0, 0, -85);
