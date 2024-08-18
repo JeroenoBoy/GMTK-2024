@@ -18,5 +18,5 @@ MonoBehaviour:
   <margin>k__BackingField:
     _min: 0
     _max: 40
-  <tooLow>k__BackingField: There is no stock left
-  <tooHigh>k__BackingField: There is too much stock
+  <tooLow>k__BackingField: There is not enough wheat!
+  <tooHigh>k__BackingField: The wheat is spoiling!

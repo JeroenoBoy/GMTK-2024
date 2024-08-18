@@ -18,5 +18,5 @@ MonoBehaviour:
   <margin>k__BackingField:
     _min: -10
     _max: 60
-  <tooLow>k__BackingField: People are thirsty
-  <tooHigh>k__BackingField: People are tired of water
+  <tooLow>k__BackingField: The wells are running dry!
+  <tooHigh>k__BackingField: The water is spilling!
