@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 
 public class buildingFalling : MonoBehaviour
@@ -14,6 +15,8 @@ public class buildingFalling : MonoBehaviour
 
     private float _time;
     private int _collisionCount;
+
+    private List<GameObject> _knowBuilding = new List<GameObject>();
 
     private void Awake()
     {
@@ -59,6 +62,12 @@ public class buildingFalling : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        if(!_knowBuilding.Contains(collision.gameObject))
+        {
+            _knowBuilding.Add(collision.gameObject);
+            SoundManager.instance.Play("fall");
+        }
+
         if (_RB2D.velocity.magnitude < 0.1f) {
             _time -= Time.deltaTime;
             if (_time < 0f) {
