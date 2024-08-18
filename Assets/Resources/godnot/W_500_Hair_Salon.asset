@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 342a7d4618dd4b3aa09329ee44afd739, type: 3}
-  m_Name: W_400_School
+  m_Name: W_500_Hair_Salon
   m_EditorClassIdentifier: 
-  <message>k__BackingField: Their brains are rotting away from all of these sensless
-    stories. Make them smarter!
+  <message>k__BackingField: People have been running around with their bed hair for
+    far too long. Give them some style points
   <stayTime>k__BackingField: 5
   <notificationCheck>k__BackingField:
     rid: 8539901736068579334
@@ -23,4 +23,4 @@ MonoBehaviour:
     - rid: 8539901736068579334
       type: {class: GodWeightCheck, ns: , asm: Assembly-CSharp}
       data:
-        _weight: 400
+        _weight: 500
