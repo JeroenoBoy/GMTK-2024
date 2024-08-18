@@ -599,6 +599,7 @@ MonoBehaviour:
   _screenPostion: {x: 0, y: 0, z: 0}
   _worldPostion: {x: 0, y: 0, z: 0}
   _parentobject: {fileID: 300629796}
+  _xNoClickDistance: 0
 --- !u!61 &399543941
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2297,7 +2298,7 @@ MonoBehaviour:
   _sounds:
   - _name: Start
     _audioClip: {fileID: 8300000, guid: 3bb9e200ed07bf2498350dba48178028, type: 3}
-    _vuluom: 0.59
+    _vuluom: 0.1
     pitch: 1.27
     _source: {fileID: 0}
     _loop: 1
@@ -2309,13 +2310,13 @@ MonoBehaviour:
     _loop: 0
   - _name: Place
     _audioClip: {fileID: 8300000, guid: 7e4cffbc3b925fc45b0b7fe9a9924606, type: 3}
-    _vuluom: 0.53
+    _vuluom: 1
     pitch: 1.76
     _source: {fileID: 0}
     _loop: 0
   - _name: Selecated
     _audioClip: {fileID: 8300000, guid: 3cde22925c8563647a7965b544efce0c, type: 3}
-    _vuluom: 0.53
+    _vuluom: 0.84
     pitch: 1.37
     _source: {fileID: 0}
     _loop: 0
@@ -2339,7 +2340,7 @@ MonoBehaviour:
     _loop: 0
   - _name: fall
     _audioClip: {fileID: 8300000, guid: 3b9c45752e2b0a24db9dab2c614035af, type: 3}
-    _vuluom: 0.63
+    _vuluom: 0.43
     pitch: 1.59
     _source: {fileID: 0}
     _loop: 0
