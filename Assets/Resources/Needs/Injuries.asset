@@ -18,5 +18,5 @@ MonoBehaviour:
   <margin>k__BackingField:
     _min: -25
     _max: 30
-  <tooLow>k__BackingField: There isnt any medic work
+  <tooLow>k__BackingField: Your hospitals are empty
   <tooHigh>k__BackingField: There are too many injuries
