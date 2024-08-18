@@ -234,8 +234,8 @@ MonoBehaviour:
   - <need>k__BackingField: {fileID: 11400000, guid: 516187de073e7b241b7a8aece420178f,
       type: 2}
     <value>k__BackingField:
-      _min: 0
-      _max: 0
+      _min: 2
+      _max: 3
   <provides>k__BackingField: []
 --- !u!114 &8893171504633741585
 MonoBehaviour:
@@ -249,12 +249,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <minWeight>k__BackingField: 0
+  <minWeight>k__BackingField: 400
   <needs>k__BackingField:
-  - <need>k__BackingField: {fileID: 0}
+  - <need>k__BackingField: {fileID: 11400000, guid: 67fe99a7b984ada45a9723fc625a49ac,
+      type: 2}
     <value>k__BackingField:
-      _min: 0
-      _max: 0
+      _min: 3
+      _max: 4
   <provides>k__BackingField: []
 --- !u!114 &1912553247980302269
 MonoBehaviour:
