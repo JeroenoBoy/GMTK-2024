@@ -68,8 +68,8 @@ MonoBehaviour:
   - <need>k__BackingField: {fileID: 11400000, guid: 38cbb18c787f4874497d5fb43cbc3165,
       type: 2}
     <value>k__BackingField:
-      _min: 5
-      _max: 10
+      _min: 9
+      _max: 12
   <provides>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: 68c8032aded13c74db0569dcb7f9a6c5,
       type: 2}

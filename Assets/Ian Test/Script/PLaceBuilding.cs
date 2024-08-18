@@ -92,7 +92,7 @@ public class PLaceBuilding : SingletonBehaviour<PLaceBuilding>
                 if (!_kanNietPlaatssen) {
                     
                     GameObject building = Instantiate(_sellectedObject, _worldPostion, Quaternion.Euler(0, 0, 0), _parentobject.transform);
-                    building.AddComponent<buildingFalling>();
+                    building.AddComponent<buildingFalling>().prefab = _sellectedObject;
                     building.AddComponent<Rigidbody2D>();
                 }
             }
