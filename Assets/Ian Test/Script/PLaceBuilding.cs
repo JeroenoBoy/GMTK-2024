@@ -23,6 +23,8 @@ public class PLaceBuilding : SingletonBehaviour<PLaceBuilding>
     private PolygonCollider2D _pC2D;
     private SpriteRenderer _sR;
 
+    [SerializeField] private float _xNoClickDistance;
+
     public void SelectObject(GameObject obj)
     {
         _sellectedObject = obj;
@@ -89,12 +91,20 @@ public class PLaceBuilding : SingletonBehaviour<PLaceBuilding>
         if (_timer < 0f) {
             if (_isClicked) {
                 _timer = .5f;
-                if (!_kanNietPlaatssen) {
-                    
-                    GameObject building = Instantiate(_sellectedObject, _worldPostion, Quaternion.Euler(0, 0, 0), _parentobject.transform);
-                    building.AddComponent<buildingFalling>().prefab = _sellectedObject;
-                    building.AddComponent<Rigidbody2D>();
+                if(transform.position.x < _xNoClickDistance)
+                {
+                    if (!_kanNietPlaatssen)
+                    {
+
+                        GameObject building = Instantiate(_sellectedObject, _worldPostion, Quaternion.Euler(0, 0, 0), _parentobject.transform);
+                        building.AddComponent<buildingFalling>().prefab = _sellectedObject;
+                        building.AddComponent<Rigidbody2D>();
+                    }
                 }
+                else
+                {
+                    _sR.color = Color.Lerp(Color.white, Color.red, .5f);
+                }  
             }
         }
 
