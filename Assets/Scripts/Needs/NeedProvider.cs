@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class NeedProvider : MonoBehaviour
 {
+    [field: SerializeField] public float minHeight { get; private set; }
     [field: SerializeField] public NeedPair[] needs { get; private set; }
     [field: SerializeField] public NeedPair[] provides { get; private set; }
 
