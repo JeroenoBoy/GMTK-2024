@@ -90,7 +90,7 @@ public class PLaceBuilding : SingletonBehaviour<PLaceBuilding>
             if (_isClicked) {
                 _timer = .5f;
                 if (!_kanNietPlaatssen) {
-                    SoundManager.instance.Play("Place");
+                    
                     GameObject building = Instantiate(_sellectedObject, _worldPostion, Quaternion.Euler(0, 0, 0), _parentobject.transform);
                     building.AddComponent<buildingFalling>().prefab = _sellectedObject;
                     building.AddComponent<Rigidbody2D>();
