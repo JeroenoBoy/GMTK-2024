@@ -46,7 +46,7 @@ public class NeedManager : SingletonBehaviour<NeedManager>
         bool hadTooPhew = needData.hasTooPhew;
 
         needData.hasTooMuch = split > need.margin.max;
-        needData.hasTooPhew = split < -need.margin.min;
+        needData.hasTooPhew = split < need.margin.min;
 
         if (hadTooMuch && needData.hasTooPhew) {
             EventBus.instance.onNeedBalanceRegained?.Invoke(need);
