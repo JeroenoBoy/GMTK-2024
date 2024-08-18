@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7389337525336173845}
   - component: {fileID: -2484751406630793374}
   - component: {fileID: -902373836476814859}
-  - component: {fileID: -7024017194419833932}
+  - component: {fileID: 7846208502732576930}
   - component: {fileID: 7236939815380922146}
   - component: {fileID: 3024819473392389746}
   m_Layer: 0
@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <minHeight>k__BackingField: 0
   <needs>k__BackingField: []
   <provides>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: 68c8032aded13c74db0569dcb7f9a6c5,
@@ -107,8 +108,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-7024017194419833932
-BoxCollider2D:
+--- !u!60 &7846208502732576930
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -149,9 +150,17 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.2733333, y: 1.52}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1.1366667, y: 0.76}
+      - {x: -1.1366667, y: -0.02}
+      - {x: -0.37943673, y: -0.016690493}
+      - {x: -0.38333336, y: -0.76}
+      - {x: 0.40333334, y: -0.76}
+      - {x: 0.39728016, y: -0.017300487}
+      - {x: 1.1366667, y: -0.02}
+      - {x: 1.1366667, y: 0.76}
+  m_UseDelaunayMesh: 0
 --- !u!114 &7236939815380922146
 MonoBehaviour:
   m_ObjectHideFlags: 0

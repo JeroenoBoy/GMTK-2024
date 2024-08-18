@@ -20,23 +20,32 @@ public class PLaceBuilding : SingletonBehaviour<PLaceBuilding>
     private float _timer;
 
     private BoxCollider2D _bC2D;
+    private PolygonCollider2D _pC2D;
     private SpriteRenderer _sR;
 
     public void SelectObject(GameObject obj)
     {
         _sellectedObject = obj;
         _sR.sprite = _sellectedObject.GetComponent<SpriteRenderer>().sprite;
-        gameObject.GetComponent<BoxCollider2D>().size = _sellectedObject.GetComponent<BoxCollider2D>().size;
+
+        _bC2D.enabled = false;
+        _pC2D.enabled = false;
+        if (_sellectedObject.TryGetComponent(out BoxCollider2D boxCollider2D)) {
+            _bC2D.enabled = true;
+            _bC2D.size = boxCollider2D.size;
+        } else if (_sellectedObject.TryGetComponent(out PolygonCollider2D polygonCollider2D)) {
+            _pC2D.enabled = true;
+            _pC2D.SetPath(0, polygonCollider2D.GetPath(0));
+        }
     }
 
     private void Start()
     {
         _sR = GetComponent<SpriteRenderer>();
         _bC2D = GetComponent<BoxCollider2D>();
+        _pC2D = GetComponent<PolygonCollider2D>();
 
-        _sellectedObject = _buildingObjects[0];
-        _sR.sprite = _sellectedObject.GetComponent<SpriteRenderer>().sprite;
-        _bC2D.size = _sellectedObject.GetComponent<BoxCollider2D>().size;
+        SelectObject(_buildingObjects[0]);
     }
 
     private void OnTriggerStay2D(Collider2D other)
