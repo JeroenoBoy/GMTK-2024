@@ -9,13 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7389337525336173845}
-  - component: {fileID: -902373836476814859}
-  - component: {fileID: 2010793304535720163}
-  - component: {fileID: 8715317144417559519}
-  - component: {fileID: -6917696208180658248}
   - component: {fileID: -2484751406630793374}
+  - component: {fileID: -902373836476814859}
+  - component: {fileID: 7236939815380922146}
+  - component: {fileID: 3024819473392389746}
+  - component: {fileID: 3609719373077183923}
   m_Layer: 0
-  m_Name: Houses
+  m_Name: Farms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,6 +36,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-2484751406630793374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304382771576342832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <minHeight>k__BackingField: -9
+  <needs>k__BackingField:
+  - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
+      type: 2}
+    <value>k__BackingField:
+      _min: 5
+      _max: 10
+  - <need>k__BackingField: {fileID: 11400000, guid: a55ff40a0584f514d9f423debf1ec9f4,
+      type: 2}
+    <value>k__BackingField:
+      _min: 3
+      _max: 7
+  - <need>k__BackingField: {fileID: 11400000, guid: 38cbb18c787f4874497d5fb43cbc3165,
+      type: 2}
+    <value>k__BackingField:
+      _min: 3
+      _max: 5
+  <provides>k__BackingField:
+  - <need>k__BackingField: {fileID: 11400000, guid: 778e5e0824a114244a2804e9e8701f76,
+      type: 2}
+    <value>k__BackingField:
+      _min: 15
+      _max: 20
+  - <need>k__BackingField: {fileID: 11400000, guid: d7f242a98c119e648a438e7452dd7df0,
+      type: 2}
+    <value>k__BackingField:
+      _min: 5
+      _max: 10
 --- !u!212 &-902373836476814859
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -77,7 +117,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1104871674, guid: ded368ca25d97a746845fc2d63a2d129, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1772a38bdbdea604fb9d21f666e23b9e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -88,8 +128,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2010793304535720163
-BoxCollider2D:
+--- !u!114 &7236939815380922146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304382771576342832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c17df2e9f0e14812bde37500c20836d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <weight>k__BackingField: 20
+--- !u!114 &3024819473392389746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304382771576342832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911e0df83d6047c89ec67f4322e199b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _delay:
+    _min: 0
+    _max: 0.2
+--- !u!60 &3609719373077183923
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -124,80 +192,18 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.52, y: 2.2733333}
+    oldSize: {x: 2.2733333, y: 2.2733333}
     newSize: {x: 2.28, y: 3.41}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.52, y: 2.2733333}
-  m_EdgeRadius: 0
---- !u!114 &8715317144417559519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3304382771576342832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c17df2e9f0e14812bde37500c20836d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <weight>k__BackingField: 10
---- !u!114 &-6917696208180658248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3304382771576342832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 911e0df83d6047c89ec67f4322e199b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _delay:
-    _min: 0
-    _max: 0.2
---- !u!114 &-2484751406630793374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3304382771576342832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <minHeight>k__BackingField: -10
-  <needs>k__BackingField:
-  - <need>k__BackingField: {fileID: 11400000, guid: 68c8032aded13c74db0569dcb7f9a6c5,
-      type: 2}
-    <value>k__BackingField:
-      _min: 3
-      _max: 3
-  - <need>k__BackingField: {fileID: 11400000, guid: a55ff40a0584f514d9f423debf1ec9f4,
-      type: 2}
-    <value>k__BackingField:
-      _min: 3
-      _max: 5
-  - <need>k__BackingField: {fileID: 11400000, guid: d9ab2fcf0baff6d4cac3def1d3869365,
-      type: 2}
-    <value>k__BackingField:
-      _min: 3
-      _max: 5
-  <provides>k__BackingField:
-  - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
-      type: 2}
-    <value>k__BackingField:
-      _min: 5
-      _max: 8
-  - <need>k__BackingField: {fileID: 11400000, guid: d7f242a98c119e648a438e7452dd7df0,
-      type: 2}
-    <value>k__BackingField:
-      _min: 1
-      _max: 2
+  m_Points:
+    m_Paths:
+    - - {x: -0.39000002, y: 1.1366667}
+      - {x: -0.386467, y: 0.40970033}
+      - {x: -1.1366667, y: 0.39666668}
+      - {x: -1.1366667, y: -1.1366667}
+      - {x: 1.1366667, y: -1.1366667}
+      - {x: 1.1366667, y: 1.1366667}
+  m_UseDelaunayMesh: 0
