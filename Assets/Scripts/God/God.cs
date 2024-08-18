@@ -11,6 +11,8 @@ public class God : BalancingContainer
     [SerializeField] private float _spawnPadding;
     [SerializeField] private float _spawnHeight;
 
+    public float towerHeight => Mathf.Floor((float)_spawnCount / _spawnRows) * _spawnPadding;
+
     private int _spawnCount;
     private float _spawnTimer;
 
