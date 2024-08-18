@@ -2,7 +2,7 @@ using JUtils;
 using UnityEngine;
 
 
-public class BalancingBeam : MonoBehaviour
+public class BalancingBeam : SingletonBehaviour<BalancingBeam>
 {
     [SerializeField] private Transform _directParent;
     [SerializeField] private BalancingContainer _containerLeft;
@@ -24,12 +24,14 @@ public class BalancingBeam : MonoBehaviour
     [SerializeField] private float _pivotMoveSpeed;
 
     public float unbalancedPercentage => (_containerRight.currentWeight - _containerLeft.currentWeight) / _maxWeightDifference;
+    public bool isDone => _didGoOutOfBalance;
 
     private float _leftMass;
     private float _rightMass;
     private float _smoothVel;
 
     private bool _didGoOutOfBalance = false;
+    private float _gameDoneTimer;
 
     private void Awake()
     {
@@ -42,6 +44,15 @@ public class BalancingBeam : MonoBehaviour
     }
 
     private void Update()
+    {
+        if (_didGoOutOfBalance) {
+            ProcessGameOver();
+        } else {
+            ProcessBalancing();
+        }
+    }
+
+    private void ProcessBalancing()
     {
         float currentY = transform.position.y;
         float targetY = Mathf.Max(currentHeight - _maxDistanceBehind, currentY);
@@ -63,6 +74,15 @@ public class BalancingBeam : MonoBehaviour
 
         Quaternion targetRotation = Quaternion.Euler(0, 0, angle + offsetMovement);
         Quaternion newRotation = Quaternion.Slerp(transform.rotation, targetRotation, 1 - Mathf.Exp(-10 * Time.deltaTime));
+        transform.rotation = newRotation;
+    }
+
+    private void ProcessGameOver()
+    {
+        _gameDoneTimer += Time.deltaTime / 5;
+
+        Quaternion targetRotation = Quaternion.Euler(0, 0, -85);
+        Quaternion newRotation = Quaternion.Slerp(transform.rotation, targetRotation, 1 - Mathf.Exp(-Mathf.Clamp01(_gameDoneTimer) * Time.deltaTime));
         transform.rotation = newRotation;
     }
 

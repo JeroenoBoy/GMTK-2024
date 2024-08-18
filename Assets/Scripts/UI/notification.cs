@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class notification : MonoBehaviour
 {
@@ -19,22 +18,21 @@ public class notification : MonoBehaviour
         NeedData needData = NeedManager.instance.needs[need];
         _text.text = needData.hasTooPhew ? need.tooLow : need.tooHigh;
     }
+
     private void OnEnable()
     {
         EventBus.instance.onNeedBalanceRegained += HandleNeedBalanceRegained;
     }
+
     private void OnDisable()
     {
         EventBus.instance.onNeedBalanceRegained -= HandleNeedBalanceRegained;
     }
+
     private void HandleNeedBalanceRegained(Need need)
     {
-        if(need == _need)
-        {
+        if (need == _need) {
             Destroy(gameObject);
         }
-        
-            
-          
     }
 }

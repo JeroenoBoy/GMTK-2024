@@ -29,7 +29,7 @@ public class buildingFalling : MonoBehaviour
 
     private void Update()
     {
-        if (Mathf.Abs(Mathf.DeltaAngle(transform.eulerAngles.z, 0)) > 45) {
+        if (Mathf.Abs(Mathf.DeltaAngle(transform.eulerAngles.z, 0)) > 110) {
             collider.enabled = false;
         }
 
