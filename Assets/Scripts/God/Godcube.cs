@@ -6,6 +6,7 @@ namespace DefaultNamespace
 {
     public class Godcube : Weightable
     {
+        [SerializeField] private Need _heightNeed;
         [SerializeField] private float _startSpeed;
         [SerializeField] private float _acceleration;
         [SerializeField] private float _height = 0.5f;
@@ -30,6 +31,15 @@ namespace DefaultNamespace
 
             transform.localPosition = targetPosition;
             onCubeLand?.Invoke();
+
+            NeedManager man = NeedManager.instance;
+            if (!man.needs.TryGetValue(_heightNeed, out NeedData needData)) {
+                needData = new NeedData(_heightNeed);
+                man.needs[_heightNeed] = needData;
+            }
+
+            needData.required = Mathf.CeilToInt(targetPosition.y);
+            man.RecalculateNeed(_heightNeed);
         }
     }
 }

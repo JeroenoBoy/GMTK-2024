@@ -7,6 +7,7 @@ public class BalancingBeam : SingletonBehaviour<BalancingBeam>
     [SerializeField] private Transform _directParent;
     [SerializeField] private BalancingContainer _containerLeft;
     [SerializeField] private BalancingContainer _containerRight;
+    [SerializeField] private Need _heightNeed;
 
     [Header("Settings")]
     [SerializeField] private float _maxWeightDifference;
@@ -33,13 +34,15 @@ public class BalancingBeam : SingletonBehaviour<BalancingBeam>
     private bool _didGoOutOfBalance = false;
     private float _gameDoneTimer;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         EventBus.instance.onBuildingSettle += HandleBuildingSettle;
     }
 
-    private void OnDestroy()
+    protected override void OnDestroy()
     {
+        base.OnDestroy();
         EventBus.instance.onBuildingSettle -= HandleBuildingSettle;
     }
 
@@ -89,6 +92,18 @@ public class BalancingBeam : SingletonBehaviour<BalancingBeam>
     private void HandleBuildingSettle(buildingFalling fallingBuilding)
     {
         float height = fallingBuilding.collider.ClosestPoint(Vector2.up * 10_000_000f).y;
-        currentHeight = Mathf.Max(currentHeight, height);
+        if (height > currentHeight) {
+            currentHeight = height;
+            EventBus.instance.onHeightUpdate?.Invoke(currentHeight);
+        }
+
+        NeedManager man = NeedManager.instance;
+        if (!man.needs.TryGetValue(_heightNeed, out NeedData needData)) {
+            needData = new NeedData(_heightNeed);
+            man.needs[_heightNeed] = needData;
+        }
+
+        needData.consumed = Mathf.CeilToInt(currentHeight);
+        man.RecalculateNeed(_heightNeed);
     }
 }

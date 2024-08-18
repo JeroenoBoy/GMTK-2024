@@ -1283,37 +1283,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &850405353
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 850405354}
-  m_Layer: 0
-  m_Name: GodCube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &850405354
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 850405353}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &887624546
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,6 +1964,7 @@ MonoBehaviour:
   _directParent: {fileID: 1150822211}
   _containerLeft: {fileID: 797232939}
   _containerRight: {fileID: 300629798}
+  _heightNeed: {fileID: 11400000, guid: 03be8422803df5142a0d2b4b97109830, type: 2}
   _maxWeightDifference: 100
   <currentHeight>k__BackingField: 0
   _maxSway: 2
@@ -2155,7 +2125,6 @@ SceneRoots:
   - {fileID: 399543943}
   - {fileID: 1968770941}
   - {fileID: 1193503296}
-  - {fileID: 850405354}
   - {fileID: 2008785063}
   - {fileID: 385298650}
   - {fileID: 484385348}
