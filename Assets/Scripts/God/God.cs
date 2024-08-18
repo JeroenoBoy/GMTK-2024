@@ -61,7 +61,12 @@ public class God : BalancingContainer, ISingleton<God>
 
         instance.transform.parent = transform;
         instance.transform.Reset();
-        instance.StartMoving(spawnPosition, targetPosition, () => currentWeight += instance.weight);
+        instance.StartMoving(
+            spawnPosition, targetPosition, () => {
+                currentWeight += instance.weight;
+                EventBus.instance.onGodWeightUpdate?.Invoke(currentWeight);
+            }
+        );
 
         _spawnCount++;
     }

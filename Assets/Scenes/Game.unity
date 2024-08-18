@@ -2595,12 +2595,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _demands:
-  - need: {fileID: 11400000, guid: 778e5e0824a114244a2804e9e8701f76, type: 2}
+  - type: 1
+    need: {fileID: 11400000, guid: 778e5e0824a114244a2804e9e8701f76, type: 2}
     amount: 10
     weight: 100
-  - need: {fileID: 11400000, guid: a55ff40a0584f514d9f423debf1ec9f4, type: 2}
+  - type: 1
+    need: {fileID: 11400000, guid: a55ff40a0584f514d9f423debf1ec9f4, type: 2}
     amount: 10
-    weight: 150
+    weight: 200
 --- !u!1 &1968770939
 GameObject:
   m_ObjectHideFlags: 0
