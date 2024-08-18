@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7389337525336173845}
   - component: {fileID: -2484751406630793374}
   - component: {fileID: -902373836476814859}
-  - component: {fileID: -7024017194419833932}
   - component: {fileID: 7236939815380922146}
   - component: {fileID: 3024819473392389746}
+  - component: {fileID: 193041831358915150}
   m_Layer: 0
   m_Name: Farm
   m_TagString: Untagged
@@ -123,8 +123,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-7024017194419833932
-BoxCollider2D:
+--- !u!114 &7236939815380922146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304382771576342832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c17df2e9f0e14812bde37500c20836d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <weight>k__BackingField: 20
+--- !u!114 &3024819473392389746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304382771576342832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911e0df83d6047c89ec67f4322e199b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _delay:
+    _min: 0
+    _max: 0.2
+--- !u!60 &193041831358915150
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -165,34 +193,12 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.2733333, y: 2.2733333}
-  m_EdgeRadius: 0
---- !u!114 &7236939815380922146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3304382771576342832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c17df2e9f0e14812bde37500c20836d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <weight>k__BackingField: 20
---- !u!114 &3024819473392389746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3304382771576342832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 911e0df83d6047c89ec67f4322e199b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _delay:
-    _min: 0
-    _max: 0.2
+  m_Points:
+    m_Paths:
+    - - {x: -0.39000002, y: 1.1366667}
+      - {x: -0.38173527, y: 0.3926362}
+      - {x: -1.1366667, y: 0.39666668}
+      - {x: -1.1366667, y: -1.1366667}
+      - {x: 1.1366667, y: -1.1366667}
+      - {x: 1.1366667, y: 1.1366667}
+  m_UseDelaunayMesh: 0
