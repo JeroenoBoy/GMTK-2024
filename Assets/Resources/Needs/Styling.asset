@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Styling
   m_EditorClassIdentifier: 
   <name>k__BackingField: Styling
-  <color>k__BackingField: {r: 0.5396226, g: 0.3111537, b: 0.22704872, a: 1}
+  <color>k__BackingField: {r: 0.3056603, g: 0.14475608, b: 0.14475608, a: 1}
   <icon>k__BackingField: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   <margin>k__BackingField:
-    _min: -10
-    _max: 30
-  <tooLow>k__BackingField: The wells are running dry!
-  <tooHigh>k__BackingField: The water is spilling!
+    _min: -15
+    _max: 20
+  <tooLow>k__BackingField: The people want a haircut
+  <tooHigh>k__BackingField: hi
