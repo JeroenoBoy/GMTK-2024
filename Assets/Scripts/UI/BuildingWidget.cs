@@ -32,5 +32,6 @@ public class BuildingWidget : MonoBehaviour
     private void HandleClick()
     {
         PLaceBuilding.instance.SelectObject(_building);
+        SoundManager.instance.Play("Selecated");
     }
 }
