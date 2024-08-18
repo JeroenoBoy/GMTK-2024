@@ -88,11 +88,12 @@ public class PLaceBuilding : SingletonBehaviour<PLaceBuilding>
 
         transform.position = _worldPostion;
         _timer -= Time.deltaTime;
-        if (_timer < 0f) {
-            if (_isClicked) {
-                _timer = .5f;
-                if(transform.position.x < _xNoClickDistance)
-                {
+        if (transform.position.x < _xNoClickDistance)
+        {
+            if (_timer < 0f) {
+                if (_isClicked) {
+                    _timer = .5f;
+               
                     if (!_kanNietPlaatssen)
                     {
 
@@ -101,11 +102,12 @@ public class PLaceBuilding : SingletonBehaviour<PLaceBuilding>
                         building.AddComponent<Rigidbody2D>();
                     }
                 }
-                else
-                {
-                    _sR.color = Color.Lerp(Color.white, Color.red, .5f);
-                }  
+                
             }
+        }
+        else
+        {
+            _sR.color = Color.red;
         }
 
         _isClicked = false;
