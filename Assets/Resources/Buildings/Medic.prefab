@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7236939815380922146}
   - component: {fileID: 3024819473392389746}
   m_Layer: 0
-  m_Name: Farm
+  m_Name: Medic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,29 +48,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <minHeight>k__BackingField: -8
+  <minHeight>k__BackingField: 0
   <needs>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
       type: 2}
     <value>k__BackingField:
-      _min: 3
-      _max: 5
-  - <need>k__BackingField: {fileID: 11400000, guid: 8a19a2705be3de74daf563022f78040d,
-      type: 2}
-    <value>k__BackingField:
-      _min: 5
-      _max: 6
-  <provides>k__BackingField:
-  - <need>k__BackingField: {fileID: 11400000, guid: 778e5e0824a114244a2804e9e8701f76,
-      type: 2}
-    <value>k__BackingField:
-      _min: 7
+      _min: 6
       _max: 10
   - <need>k__BackingField: {fileID: 11400000, guid: d7f242a98c119e648a438e7452dd7df0,
       type: 2}
     <value>k__BackingField:
-      _min: 2
-      _max: 8
+      _min: 30
+      _max: 40
+  <provides>k__BackingField: []
 --- !u!212 &-902373836476814859
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -112,7 +102,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1772a38bdbdea604fb9d21f666e23b9e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2a514044efbaece459c8bf37a23d6478, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
