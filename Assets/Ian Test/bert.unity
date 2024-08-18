@@ -454,7 +454,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.41, y: 2.27}
+    oldSize: {x: 2.2733333, y: 1.5133333}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -943,6 +943,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &907673171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 907673173}
+  - component: {fileID: 907673172}
+  m_Layer: 0
+  m_Name: audioManger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &907673172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907673171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97eaab9bd9d1c8a48b2e8aafc5758f1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sounds:
+  - _name: Start
+    _audioClip: {fileID: 8300000, guid: 3bb9e200ed07bf2498350dba48178028, type: 3}
+    _vuluom: 0.59
+    pitch: 1.27
+    _source: {fileID: 0}
+    _loop: 1
+  - _name: 
+    _audioClip: {fileID: 0}
+    _vuluom: 0
+    pitch: 0
+    _source: {fileID: 0}
+    _loop: 0
+--- !u!4 &907673173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907673171}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.6824045, y: 19.333405, z: 34.34732}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1002627689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,7 +1322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adfc52339348458a11782496963d36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _beamTransform: {fileID: 1968770941}
+  _directParent: {fileID: 0}
   _containerLeft: {fileID: 797232939}
   _containerRight: {fileID: 300629798}
   _maxWeightDifference: 100
@@ -1274,6 +1331,9 @@ MonoBehaviour:
   _maxAngle: 10
   _wiggleIntensity: 0.5
   _wiggleFrequency: 0.5
+  _maxDistanceBehind: 0
+  _pivotSmoothTime: 0
+  _pivotMoveSpeed: 0
 --- !u!4 &1968770941
 Transform:
   m_ObjectHideFlags: 0
@@ -1305,3 +1365,4 @@ SceneRoots:
   - {fileID: 1193503296}
   - {fileID: 850405354}
   - {fileID: 150318803}
+  - {fileID: 907673173}
