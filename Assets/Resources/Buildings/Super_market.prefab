@@ -60,12 +60,22 @@ MonoBehaviour:
     <value>k__BackingField:
       _min: 3
       _max: 5
+  - <need>k__BackingField: {fileID: 11400000, guid: 03be8422803df5142a0d2b4b97109830,
+      type: 2}
+    <value>k__BackingField:
+      _min: 5
+      _max: 10
+  - <need>k__BackingField: {fileID: 11400000, guid: 38cbb18c787f4874497d5fb43cbc3165,
+      type: 2}
+    <value>k__BackingField:
+      _min: 5
+      _max: 10
   <provides>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: 68c8032aded13c74db0569dcb7f9a6c5,
       type: 2}
     <value>k__BackingField:
-      _min: 20
-      _max: 25
+      _min: 15
+      _max: 20
 --- !u!212 &-902373836476814859
 SpriteRenderer:
   m_ObjectHideFlags: 0
