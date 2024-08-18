@@ -23,16 +23,16 @@ public interface IGodNotificationCheck
 
 
 [Serializable]
-public class HeightCheck : IGodNotificationCheck
+public class GodWeightCheck : IGodNotificationCheck
 {
-    [SerializeField] private float _height;
+    [SerializeField] private float _weight;
 
     public void OnEnable() { }
     public void OnDisable() { }
 
     public bool CanSee()
     {
-        return BalancingBeam.instance.currentHeight > _height;
+        return God.instance.currentWeight > _weight;
     }
 }
 
