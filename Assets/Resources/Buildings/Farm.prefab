@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: -902373836476814859}
   - component: {fileID: 7236939815380922146}
   - component: {fileID: 3024819473392389746}
-  - component: {fileID: 193041831358915150}
+  - component: {fileID: 3609719373077183923}
   - component: {fileID: -2484751406630793374}
-  - component: {fileID: -8798154354068493921}
   m_Layer: 0
   m_Name: Farm
   m_TagString: Untagged
@@ -37,46 +36,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-2484751406630793374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3304382771576342832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <minHeight>k__BackingField: 0
-  <needs>k__BackingField:
-  - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
-      type: 2}
-    <value>k__BackingField:
-      _min: 3
-      _max: 5
-  - <need>k__BackingField: {fileID: 11400000, guid: 8a19a2705be3de74daf563022f78040d,
-      type: 2}
-    <value>k__BackingField:
-      _min: 1
-      _max: 3
-  - <need>k__BackingField: {fileID: 11400000, guid: 38cbb18c787f4874497d5fb43cbc3165,
-      type: 2}
-    <value>k__BackingField:
-      _min: 5
-      _max: 10
-  <provides>k__BackingField:
-  - <need>k__BackingField: {fileID: 11400000, guid: 778e5e0824a114244a2804e9e8701f76,
-      type: 2}
-    <value>k__BackingField:
-      _min: 7
-      _max: 10
-  - <need>k__BackingField: {fileID: 11400000, guid: d7f242a98c119e648a438e7452dd7df0,
-      type: 2}
-    <value>k__BackingField:
-      _min: 2
-      _max: 8
 --- !u!212 &-902373836476814859
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -157,7 +116,7 @@ MonoBehaviour:
   _delay:
     _min: 0
     _max: 0.2
---- !u!60 &193041831358915150
+--- !u!60 &3609719373077183923
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,7 +161,7 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -0.39000002, y: 1.1366667}
-      - {x: -0.38173527, y: 0.3926362}
+      - {x: -0.386467, y: 0.40970033}
       - {x: -1.1366667, y: 0.39666668}
       - {x: -1.1366667, y: -1.1366667}
       - {x: 1.1366667, y: -1.1366667}
@@ -220,46 +179,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <minHeight>k__BackingField: 0
+  <minWeight>k__BackingField: 100
   <needs>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
       type: 2}
     <value>k__BackingField:
+      _min: 5
+      _max: 10
+  - <need>k__BackingField: {fileID: 11400000, guid: a55ff40a0584f514d9f423debf1ec9f4,
+      type: 2}
+    <value>k__BackingField:
+      _min: 3
+      _max: 7
+  - <need>k__BackingField: {fileID: 11400000, guid: 38cbb18c787f4874497d5fb43cbc3165,
+      type: 2}
+    <value>k__BackingField:
       _min: 3
       _max: 5
   <provides>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: 778e5e0824a114244a2804e9e8701f76,
       type: 2}
     <value>k__BackingField:
-      _min: 7
-      _max: 10
+      _min: 15
+      _max: 20
   - <need>k__BackingField: {fileID: 11400000, guid: d7f242a98c119e648a438e7452dd7df0,
       type: 2}
     <value>k__BackingField:
-      _min: 2
-      _max: 8
---- !u!114 &-8798154354068493921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3304382771576342832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <minHeight>k__BackingField: 50
-  <needs>k__BackingField:
-  - <need>k__BackingField: {fileID: 11400000, guid: 8a19a2705be3de74daf563022f78040d,
-      type: 2}
-    <value>k__BackingField:
-      _min: 3
-      _max: 5
-  <provides>k__BackingField:
-  - <need>k__BackingField: {fileID: 11400000, guid: 778e5e0824a114244a2804e9e8701f76,
-      type: 2}
-    <value>k__BackingField:
-      _min: 2
-      _max: 8
+      _min: 5
+      _max: 10
