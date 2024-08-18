@@ -64,6 +64,7 @@ public class buildingFalling : MonoBehaviour
                 Destroy(_RB2D);
                 Destroy(this);
                 EventBus.instance.onBuildingSettle?.Invoke(this);
+                SoundManager.instance.Play("Place");
             }
         } else {
             _time = _maxTime;
