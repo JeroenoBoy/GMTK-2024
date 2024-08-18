@@ -24,13 +24,12 @@ public class SoundManager : SingletonBehaviour<SoundManager>
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        Play("Start");
     }
 
-    public void Play (String name)
+    public void Play(String name)
     {
         Sound s = Array.Find(_sounds, sound => sound._name == name);
         if (s == null)
