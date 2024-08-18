@@ -2286,6 +2286,111 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1085006428}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1389574914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1389574916}
+  - component: {fileID: 1389574915}
+  m_Layer: 0
+  m_Name: audioManger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1389574915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389574914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97eaab9bd9d1c8a48b2e8aafc5758f1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sounds:
+  - _name: Start
+    _audioClip: {fileID: 8300000, guid: 3bb9e200ed07bf2498350dba48178028, type: 3}
+    _vuluom: 0.59
+    pitch: 1.27
+    _source: {fileID: 0}
+    _loop: 1
+  - _name: Faal
+    _audioClip: {fileID: 8300000, guid: 2e36bc84ff0fcc44293e8eb650d66e71, type: 3}
+    _vuluom: 0.52
+    pitch: 1.16
+    _source: {fileID: 0}
+    _loop: 0
+  - _name: Place
+    _audioClip: {fileID: 8300000, guid: 7e4cffbc3b925fc45b0b7fe9a9924606, type: 3}
+    _vuluom: 0.53
+    pitch: 1.76
+    _source: {fileID: 0}
+    _loop: 0
+  - _name: Selecated
+    _audioClip: {fileID: 8300000, guid: 3cde22925c8563647a7965b544efce0c, type: 3}
+    _vuluom: 0.53
+    pitch: 1.37
+    _source: {fileID: 0}
+    _loop: 0
+  - _name: notivacation1
+    _audioClip: {fileID: 8300000, guid: c6cd4de69e258b64a9cd844addd00c40, type: 3}
+    _vuluom: 0.49
+    pitch: 1.64
+    _source: {fileID: 0}
+    _loop: 0
+  - _name: notivacation2
+    _audioClip: {fileID: 8300000, guid: 39eec099c3c573c40830c71022ce6a69, type: 3}
+    _vuluom: 0.52
+    pitch: 1.41
+    _source: {fileID: 0}
+    _loop: 0
+  - _name: notivacation3
+    _audioClip: {fileID: 8300000, guid: a5ace95d8e01d8646bf519bfad886d87, type: 3}
+    _vuluom: 0.49
+    pitch: 1.61
+    _source: {fileID: 0}
+    _loop: 0
+  - _name: 
+    _audioClip: {fileID: 0}
+    _vuluom: 0
+    pitch: 0
+    _source: {fileID: 0}
+    _loop: 0
+  - _name: 
+    _audioClip: {fileID: 0}
+    _vuluom: 0
+    pitch: 0
+    _source: {fileID: 0}
+    _loop: 0
+  - _name: 
+    _audioClip: {fileID: 0}
+    _vuluom: 0
+    pitch: 0
+    _source: {fileID: 0}
+    _loop: 0
+--- !u!4 &1389574916
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389574914}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.6824045, y: 19.333405, z: 34.34732}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1931164971}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1400202046
 GameObject:
   m_ObjectHideFlags: 0
@@ -2475,7 +2580,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1389574916}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1931164972
