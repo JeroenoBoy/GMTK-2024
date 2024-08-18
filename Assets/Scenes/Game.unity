@@ -2596,8 +2596,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _demands:
   - need: {fileID: 11400000, guid: 778e5e0824a114244a2804e9e8701f76, type: 2}
-    amount: 100
-    weight: 0
+    amount: 10
+    weight: 100
+  - need: {fileID: 11400000, guid: a55ff40a0584f514d9f423debf1ec9f4, type: 2}
+    amount: 10
+    weight: 150
 --- !u!1 &1968770939
 GameObject:
   m_ObjectHideFlags: 0

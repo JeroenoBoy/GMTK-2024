@@ -9,11 +9,16 @@ public class NeedProvider : MonoBehaviour
     [field: SerializeField] public NeedPair[] needs { get; private set; }
     [field: SerializeField] public NeedPair[] provides { get; private set; }
 
+    private bool _didProvide = false;
+
     private int[] _needValues;
     private int[] _providesValues;
 
     private void OnEnable()
     {
+        if (God.instance.currentWeight < minWeight) return;
+        _didProvide = true;
+
         NeedManager needManager = NeedManager.instance;
 
         _needValues = new int[needs.Length];
@@ -30,12 +35,14 @@ public class NeedProvider : MonoBehaviour
             NeedPair pair = provides[i];
             int amount = pair.value.Random();
             _providesValues[i] = amount;
-            needManager.AddNeed(pair.need, amount);
+            needManager.ProvideNeed(pair.need, amount);
         }
     }
 
     private void OnDisable()
     {
+        if (!_didProvide) return;
+
         NeedManager needManager = NeedManager.instance;
 
         for (int i = 0; i < needs.Length; i++) {
@@ -45,7 +52,7 @@ public class NeedProvider : MonoBehaviour
 
         for (int i = 0; i < provides.Length; i++) {
             NeedPair pair = provides[i];
-            needManager.AddNeed(pair.need, -_providesValues[i]);
+            needManager.ProvideNeed(pair.need, -_providesValues[i]);
         }
     }
 }

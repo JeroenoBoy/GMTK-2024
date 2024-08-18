@@ -85,7 +85,7 @@ public class BalancingBeam : SingletonBehaviour<BalancingBeam>
         SoundManager.instance.Play("Faal");
         _gameDoneTimer += Time.deltaTime / 5;
 
-        Quaternion targetRotation = Quaternion.Euler(0, 0, -85);
+        Quaternion targetRotation = Quaternion.Euler(0, 0, 85 * Mathf.Sign(unbalancedPercentage));
         Quaternion newRotation = Quaternion.Slerp(transform.rotation, targetRotation, 1 - Mathf.Exp(-Mathf.Clamp01(_gameDoneTimer) * Time.deltaTime));
         transform.rotation = newRotation;
     }

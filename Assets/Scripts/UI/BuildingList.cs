@@ -16,12 +16,12 @@ public class BuildingList : MonoBehaviour
 
     private void OnEnable()
     {
-        EventBus.instance.onHeightUpdate += HandleHeightChanged;
+        EventBus.instance.onGodWeightUpdate += HandleWeightChanged;
     }
 
     private void OnDisable()
     {
-        EventBus.instance.onHeightUpdate -= HandleHeightChanged;
+        EventBus.instance.onGodWeightUpdate -= HandleWeightChanged;
     }
 
     private void Recalculate()
@@ -33,14 +33,19 @@ public class BuildingList : MonoBehaviour
         _objects.Clear();
 
         GameObject[] objs = Resources.LoadAll<GameObject>("Buildings");
-        foreach (GameObject o in objs.OrderBy(o => o.GetComponents<NeedProvider>().OrderByDescending(it => it.minWeight).First().minWeight)) {
+        float godWeight = God.instance.currentWeight;
+        foreach (GameObject o in objs
+           .Select(it => (it, it.GetComponents<NeedProvider>().OrderBy(it => it.minWeight).ToArray()))
+           .Where(it => godWeight >= it.Item2.First().minWeight)
+           .OrderBy(it => it.Item2.First().minWeight)
+           .Select(it => it.it)) {
             BuildingWidget instance = Instantiate(_buildingWidget, transform);
             _objects.Add(instance.gameObject);
             instance.SetBuilding(o);
         }
     }
 
-    private void HandleHeightChanged(float height)
+    private void HandleWeightChanged(float weight)
     {
         Recalculate();
     }

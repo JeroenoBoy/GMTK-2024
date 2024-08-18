@@ -6,7 +6,7 @@ public class NeedManager : SingletonBehaviour<NeedManager>
 {
     public Dictionary<Need, NeedData> needs = new();
 
-    public void AddNeed(Need need, int value)
+    public void ProvideNeed(Need need, int value)
     {
         bool isNew = !needs.TryGetValue(need, out NeedData current);
         if (isNew) current = new NeedData(need);

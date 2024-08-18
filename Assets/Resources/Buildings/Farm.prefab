@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7389337525336173845}
-  - component: {fileID: -2484751406630793374}
   - component: {fileID: -902373836476814859}
   - component: {fileID: 7236939815380922146}
   - component: {fileID: 3024819473392389746}
   - component: {fileID: 3609719373077183923}
+  - component: {fileID: -2484751406630793374}
   m_Layer: 0
   m_Name: Farm
   m_TagString: Untagged
@@ -36,46 +36,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-2484751406630793374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3304382771576342832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <minHeight>k__BackingField: -9
-  <needs>k__BackingField:
-  - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
-      type: 2}
-    <value>k__BackingField:
-      _min: 5
-      _max: 10
-  - <need>k__BackingField: {fileID: 11400000, guid: a55ff40a0584f514d9f423debf1ec9f4,
-      type: 2}
-    <value>k__BackingField:
-      _min: 3
-      _max: 7
-  - <need>k__BackingField: {fileID: 11400000, guid: 38cbb18c787f4874497d5fb43cbc3165,
-      type: 2}
-    <value>k__BackingField:
-      _min: 3
-      _max: 5
-  <provides>k__BackingField:
-  - <need>k__BackingField: {fileID: 11400000, guid: 778e5e0824a114244a2804e9e8701f76,
-      type: 2}
-    <value>k__BackingField:
-      _min: 15
-      _max: 20
-  - <need>k__BackingField: {fileID: 11400000, guid: d7f242a98c119e648a438e7452dd7df0,
-      type: 2}
-    <value>k__BackingField:
-      _min: 5
-      _max: 10
 --- !u!212 &-902373836476814859
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -207,3 +167,43 @@ PolygonCollider2D:
       - {x: 1.1366667, y: -1.1366667}
       - {x: 1.1366667, y: 1.1366667}
   m_UseDelaunayMesh: 0
+--- !u!114 &-2484751406630793374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304382771576342832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <minWeight>k__BackingField: 100
+  <needs>k__BackingField:
+  - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
+      type: 2}
+    <value>k__BackingField:
+      _min: 5
+      _max: 10
+  - <need>k__BackingField: {fileID: 11400000, guid: a55ff40a0584f514d9f423debf1ec9f4,
+      type: 2}
+    <value>k__BackingField:
+      _min: 3
+      _max: 7
+  - <need>k__BackingField: {fileID: 11400000, guid: 38cbb18c787f4874497d5fb43cbc3165,
+      type: 2}
+    <value>k__BackingField:
+      _min: 3
+      _max: 5
+  <provides>k__BackingField:
+  - <need>k__BackingField: {fileID: 11400000, guid: 778e5e0824a114244a2804e9e8701f76,
+      type: 2}
+    <value>k__BackingField:
+      _min: 15
+      _max: 20
+  - <need>k__BackingField: {fileID: 11400000, guid: d7f242a98c119e648a438e7452dd7df0,
+      type: 2}
+    <value>k__BackingField:
+      _min: 5
+      _max: 10

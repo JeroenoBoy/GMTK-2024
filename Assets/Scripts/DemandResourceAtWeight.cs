@@ -23,7 +23,11 @@ namespace DefaultNamespace
             foreach (Demand demand in _demandsLeft) {
                 if (weight < demand.weight) continue;
                 demandsToRemove.Add(demand);
-                NeedManager.instance.AddNeed(demand.need, demand.amount);
+                if (demand.type == DemandType.Consume) {
+                    NeedManager.instance.ConsumeNeed(demand.need, demand.amount);
+                } else {
+                    NeedManager.instance.ProvideNeed(demand.need, demand.amount);
+                }
             }
 
             foreach (Demand demand in demandsToRemove) {
@@ -35,9 +39,17 @@ namespace DefaultNamespace
         [Serializable]
         private class Demand
         {
+            public DemandType type;
             public Need need;
             public int amount;
             public int weight;
+        }
+
+
+        public enum DemandType
+        {
+            Provide,
+            Consume
         }
     }
 }
