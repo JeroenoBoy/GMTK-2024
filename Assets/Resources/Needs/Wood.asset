@@ -18,5 +18,5 @@ MonoBehaviour:
   <margin>k__BackingField:
     _min: 0
     _max: 50
-  <tooLow>k__BackingField: There aren't enough books
-  <tooHigh>k__BackingField: People can't read that much
+  <tooLow>k__BackingField: You might need to chop wood
+  <tooHigh>k__BackingField: There is an overload of wood!
