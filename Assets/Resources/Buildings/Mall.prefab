@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: -902373836476814859}
   - component: {fileID: 7236939815380922146}
   - component: {fileID: 3024819473392389746}
-  - component: {fileID: 4983311925973472355}
+  - component: {fileID: 22786108006927204}
   m_Layer: 0
-  m_Name: Church
+  m_Name: Mall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,31 +50,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <minWeight>k__BackingField: 0
   <needs>k__BackingField:
-  - <need>k__BackingField: {fileID: 11400000, guid: 8a19a2705be3de74daf563022f78040d,
-      type: 2}
-    <value>k__BackingField:
-      _min: 7
-      _max: 8
   - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
       type: 2}
     <value>k__BackingField:
-      _min: 30
-      _max: 40
-  - <need>k__BackingField: {fileID: 11400000, guid: d9ab2fcf0baff6d4cac3def1d3869365,
+      _min: 20
+      _max: 30
+  - <need>k__BackingField: {fileID: 11400000, guid: 8a19a2705be3de74daf563022f78040d,
       type: 2}
     <value>k__BackingField:
-      _min: 7
-      _max: 10
-  - <need>k__BackingField: {fileID: 11400000, guid: 38cbb18c787f4874497d5fb43cbc3165,
+      _min: 5
+      _max: 8
+  <provides>k__BackingField:
+  - <need>k__BackingField: {fileID: 11400000, guid: a55ff40a0584f514d9f423debf1ec9f4,
       type: 2}
     <value>k__BackingField:
       _min: 10
       _max: 20
-  <provides>k__BackingField:
-  - <need>k__BackingField: {fileID: 0}
+  - <need>k__BackingField: {fileID: 11400000, guid: d9ab2fcf0baff6d4cac3def1d3869365,
+      type: 2}
     <value>k__BackingField:
-      _min: 0
-      _max: 0
+      _min: 10
+      _max: 20
+  - <need>k__BackingField: {fileID: 11400000, guid: 68c8032aded13c74db0569dcb7f9a6c5,
+      type: 2}
+    <value>k__BackingField:
+      _min: 10
+      _max: 20
+  - <need>k__BackingField: {fileID: 11400000, guid: 38cbb18c787f4874497d5fb43cbc3165,
+      type: 2}
+    <value>k__BackingField:
+      _min: 20
+      _max: 30
 --- !u!212 &-902373836476814859
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -116,7 +122,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bc31f16365438a24a90ac3bb579b441c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6172a8d14baf2994ab3aa37857aa6e76, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -155,7 +161,7 @@ MonoBehaviour:
   _delay:
     _min: 0
     _max: 0.2
---- !u!60 &4983311925973472355
+--- !u!60 &22786108006927204
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,7 +197,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.78, y: 4.54}
+    oldSize: {x: 4.5466666, y: 2.2733333}
     newSize: {x: 2.28, y: 3.41}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -199,12 +205,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1.15, y: 2.27}
-      - {x: -1.1556827, y: -0.73281145}
-      - {x: -1.8900001, y: -0.7166667}
-      - {x: -1.8900001, y: -2.27}
-      - {x: 1.8900001, y: -2.27}
-      - {x: 1.8900001, y: -0.7166667}
-      - {x: 1.1079589, y: -0.7153457}
-      - {x: 1.1433333, y: 2.27}
+    - - {x: 0.77362096, y: 1.1371608}
+      - {x: 0.7506763, y: 0.40449166}
+      - {x: -0.7593912, y: 0.38680637}
+      - {x: -0.73832834, y: 1.1483059}
+      - {x: -2.2733333, y: 1.1366667}
+      - {x: -2.2733333, y: -1.1366667}
+      - {x: 2.2733333, y: -1.1366667}
+      - {x: 2.2733333, y: 1.1366667}
   m_UseDelaunayMesh: 0
