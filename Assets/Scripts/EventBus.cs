@@ -9,6 +9,7 @@ public class EventBus : AutoSingletonBehaviour<EventBus>
 
     public Action<Need> onNeedAdded;
     public Action<Need> onNeedBalanceLost;
+    public Action<Need> onNeedBalanceParienceLost;
     public Action<Need> onNeedBalanceRegained;
     public Action<buildingFalling> onBuildingSettle;
 }
