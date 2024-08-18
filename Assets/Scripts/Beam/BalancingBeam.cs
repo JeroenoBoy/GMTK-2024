@@ -31,6 +31,7 @@ public class BalancingBeam : SingletonBehaviour<BalancingBeam>
     private float _smoothVel;
 
     private bool _didGoOutOfBalance = false;
+    private float _gameDoneTimer;
 
     private void Awake()
     {
@@ -78,8 +79,10 @@ public class BalancingBeam : SingletonBehaviour<BalancingBeam>
 
     private void ProcessGameOver()
     {
+        _gameDoneTimer += Time.deltaTime / 5;
+
         Quaternion targetRotation = Quaternion.Euler(0, 0, -85);
-        Quaternion newRotation = Quaternion.Slerp(transform.rotation, targetRotation, 1 - Mathf.Exp(-1 * Time.deltaTime));
+        Quaternion newRotation = Quaternion.Slerp(transform.rotation, targetRotation, 1 - Mathf.Exp(-Mathf.Clamp01(_gameDoneTimer) * Time.deltaTime));
         transform.rotation = newRotation;
     }
 

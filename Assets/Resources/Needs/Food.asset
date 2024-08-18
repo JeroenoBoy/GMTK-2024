@@ -15,8 +15,8 @@ MonoBehaviour:
   <name>k__BackingField: Food
   <color>k__BackingField: {r: 1, g: 0.7487078, b: 0, a: 1}
   <icon>k__BackingField: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  <percentage>k__BackingField:
-    _min: -5
-    _max: 200
+  <margin>k__BackingField:
+    _min: 0
+    _max: 40
   <tooLow>k__BackingField: Your people are starving!
   <tooHigh>k__BackingField: You are wasting food!

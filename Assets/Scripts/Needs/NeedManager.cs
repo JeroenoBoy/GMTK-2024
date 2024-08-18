@@ -39,14 +39,14 @@ public class NeedManager : SingletonBehaviour<NeedManager>
     {
         if (!needs.TryGetValue(need, out NeedData needData)) return;
 
-        float percentage = (float)needData.required / needData.consumed;
+        float split = needData.required - needData.consumed;
 
         bool wasUnhappy = needData.isUnhappy;
         bool hadTooMuch = needData.hasTooMuch;
         bool hadTooPhew = needData.hasTooPhew;
 
-        needData.hasTooMuch = percentage > 1 + need.percentage.max / 100f;
-        needData.hasTooPhew = percentage < 1 - need.percentage.min / 100f;
+        needData.hasTooMuch = split > need.margin.max;
+        needData.hasTooPhew = split < -need.margin.min;
 
         if (hadTooMuch && needData.hasTooPhew) {
             EventBus.instance.onNeedBalanceRegained?.Invoke(need);

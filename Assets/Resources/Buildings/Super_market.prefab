@@ -182,7 +182,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 911e0df83d6047c89ec67f4322e199b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _destroyChance: 10
   _delay:
     _min: 0
-    _max: 2
+    _max: 0.2
+  _randomForceMagnitude:
+    _min: 0
+    _max: 10

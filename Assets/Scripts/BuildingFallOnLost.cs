@@ -27,7 +27,7 @@ namespace DefaultNamespace
         private IEnumerator OutOfBalanceRoutine()
         {
             yield return new WaitForSeconds(_delay.Random());
-            gameObject.AddComponent<Rigidbody2D>();
+            Rigidbody2D rb = gameObject.AddComponent<Rigidbody2D>();
 
             if (Random.Range(0f, 100f) > 50f) {
                 GetComponent<Collider2D>().enabled = false;
