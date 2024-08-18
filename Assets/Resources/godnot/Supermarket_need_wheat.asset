@@ -13,15 +13,13 @@ MonoBehaviour:
   m_Name: Supermarket_need_wheat
   m_EditorClassIdentifier: 
   <message>k__BackingField: I demand that supermarkets now require wheat!
-  <stayTime>k__BackingField: 25
+  <stayTime>k__BackingField: 5
   <notificationCheck>k__BackingField:
-    rid: 8539901736068579331
+    rid: 8539901736068579334
   references:
     version: 2
     RefIds:
-    - rid: 8539901736068579331
-      type: {class: PatienceLost, ns: , asm: Assembly-CSharp}
+    - rid: 8539901736068579334
+      type: {class: GodWeightCheck, ns: , asm: Assembly-CSharp}
       data:
-        _need:
-          _enabled: 0
-          _value: {fileID: 0}
+        _weight: 100

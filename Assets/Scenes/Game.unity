@@ -349,20 +349,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 300629796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e5c7482deda4a72b03a2e7129f4e33b, type: 3}
+  m_Script: {fileID: 11500000, guid: 85aec49ccf654771b760f25f20e1aa83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _godCube: {fileID: 0}
-  _spawnInterval: 1e+18
-  _spawnRows: 0
-  _spawnPadding: 0
-  _spawnHeight: 0
-  _unbalanceSpawnMulti:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &349048589
 GameObject:
   m_ObjectHideFlags: 0
