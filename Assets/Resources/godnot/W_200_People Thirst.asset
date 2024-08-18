@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 342a7d4618dd4b3aa09329ee44afd739, type: 3}
-  m_Name: Unbalance
+  m_Name: W_200_People Thirst
   m_EditorClassIdentifier: 
-  <message>k__BackingField: Hey, your building looks a bit unstable... Balance the
-    weight more!
+  <message>k__BackingField: Hmm What if people got thirsty!
   <stayTime>k__BackingField: 5
   <notificationCheck>k__BackingField:
-    rid: 8539901736068579332
+    rid: 8539901736068579334
   references:
     version: 2
     RefIds:
-    - rid: 8539901736068579332
-      type: {class: IsNearlyUnbalanced, ns: , asm: Assembly-CSharp}
-      data: 
+    - rid: 8539901736068579334
+      type: {class: GodWeightCheck, ns: , asm: Assembly-CSharp}
+      data:
+        _weight: 200

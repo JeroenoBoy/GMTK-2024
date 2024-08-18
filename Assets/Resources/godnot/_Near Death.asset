@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 342a7d4618dd4b3aa09329ee44afd739, type: 3}
-  m_Name: Supermarket_need_wheat 1
+  m_Name: _Near Death
   m_EditorClassIdentifier: 
-  <message>k__BackingField: I demand that supermarkets now require wheat!
+  <message>k__BackingField: Hey, your building looks a bit unstable... Balance the
+    weight more!
   <stayTime>k__BackingField: 5
   <notificationCheck>k__BackingField:
-    rid: 8539901736068579334
+    rid: 8539901736068579332
   references:
     version: 2
     RefIds:
-    - rid: 8539901736068579334
-      type: {class: GodWeightCheck, ns: , asm: Assembly-CSharp}
-      data:
-        _weight: 100
+    - rid: 8539901736068579332
+      type: {class: IsNearlyUnbalanced, ns: , asm: Assembly-CSharp}
+      data: 

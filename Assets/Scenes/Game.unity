@@ -1408,7 +1408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _godCube: {fileID: 527224435408164452, guid: b4f04ee1dfe968d41806f8693ee71678, type: 3}
-  _spawnInterval: 2
+  _spawnInterval: 3
   _spawnRows: 5
   _spawnPadding: 2
   _spawnHeight: 15
@@ -2603,6 +2603,10 @@ MonoBehaviour:
     need: {fileID: 11400000, guid: a55ff40a0584f514d9f423debf1ec9f4, type: 2}
     amount: 10
     weight: 200
+  - type: 1
+    need: {fileID: 11400000, guid: 516187de073e7b241b7a8aece420178f, type: 2}
+    amount: 10
+    weight: 300
 --- !u!1 &1968770939
 GameObject:
   m_ObjectHideFlags: 0
