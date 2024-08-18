@@ -18,8 +18,8 @@ public class HoverThing : MonoBehaviour
 
     private void OnEnable()
     {
-        float height = BalancingBeam.instance.currentHeight;
-        NeedProvider[] activeProviders = _needProviders.Where(it => height >= it.minHeight).ToArray();
+        float weight = God.instance.currentWeight;
+        NeedProvider[] activeProviders = _needProviders.Where(it => weight >= it.minWeight).ToArray();
 
         _requiresList.SetNeeds(activeProviders.SelectMany(it => it.needs).Distinct(new ManStf()).ToArray());
         _providesList.SetNeeds(activeProviders.SelectMany(it => it.provides).Distinct(new ManStf()).ToArray());

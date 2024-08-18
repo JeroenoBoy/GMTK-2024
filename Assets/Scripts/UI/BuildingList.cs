@@ -33,7 +33,7 @@ public class BuildingList : MonoBehaviour
         _objects.Clear();
 
         GameObject[] objs = Resources.LoadAll<GameObject>("Buildings");
-        foreach (GameObject o in objs.OrderBy(o => o.GetComponents<NeedProvider>().OrderByDescending(it => it.minHeight).First().minHeight)) {
+        foreach (GameObject o in objs.OrderBy(o => o.GetComponents<NeedProvider>().OrderByDescending(it => it.minWeight).First().minWeight)) {
             BuildingWidget instance = Instantiate(_buildingWidget, transform);
             _objects.Add(instance.gameObject);
             instance.SetBuilding(o);

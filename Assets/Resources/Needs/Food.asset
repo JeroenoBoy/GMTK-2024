@@ -19,4 +19,4 @@ MonoBehaviour:
     _min: 0
     _max: 40
   <tooLow>k__BackingField: Your people are starving!
-  <tooHigh>k__BackingField: You are wasting food!
+  <tooHigh>k__BackingField: The food is getting wasted!

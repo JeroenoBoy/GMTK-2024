@@ -4,8 +4,10 @@ using JUtils;
 using UnityEngine;
 
 
-public class God : BalancingContainer
+public class God : BalancingContainer, ISingleton<God>
 {
+    public static God instance => SingletonManager.GetSingleton<God>();
+
     [SerializeField] private Godcube _godCube;
     [SerializeField] private float _spawnInterval;
     [SerializeField] private int _spawnRows;
@@ -16,6 +18,18 @@ public class God : BalancingContainer
     private List<Need> _unbalancedNeeds = new();
     private int _spawnCount;
     private float _spawnTimer;
+
+    private void Awake()
+    {
+        if (!SingletonManager.SetSingleton(this)) {
+            Destroy(this);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        SingletonManager.RemoveSingleton<God>();
+    }
 
     private void OnEnable()
     {
