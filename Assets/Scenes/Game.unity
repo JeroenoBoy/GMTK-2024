@@ -2607,6 +2607,10 @@ MonoBehaviour:
     need: {fileID: 11400000, guid: 516187de073e7b241b7a8aece420178f, type: 2}
     amount: 10
     weight: 300
+  - type: 1
+    need: {fileID: 11400000, guid: d9ab2fcf0baff6d4cac3def1d3869365, type: 2}
+    amount: 10
+    weight: 500
 --- !u!1 &1968770939
 GameObject:
   m_ObjectHideFlags: 0
