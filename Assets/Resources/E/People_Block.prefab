@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <minWeight>k__BackingField: 1000
+  <minWeight>k__BackingField: 1000999
   <needs>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: 8a19a2705be3de74daf563022f78040d,
       type: 2}
@@ -170,8 +170,8 @@ MonoBehaviour:
   - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
       type: 2}
     <value>k__BackingField:
-      _min: 20
-      _max: 25
+      _min: 15
+      _max: 20
 --- !u!60 &2690561263482080950
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -216,10 +216,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.391842, y: 1.1419494}
-      - {x: 0.385652, y: 0.4031023}
-      - {x: -0.37219417, y: 0.40151516}
-      - {x: -0.3724787, y: 1.1323119}
+    - - {x: 0.47877875, y: 1.1566539}
+      - {x: 0.49782497, y: 0.3898251}
+      - {x: -0.4897459, y: 0.3971527}
+      - {x: -0.4879139, y: 1.147077}
       - {x: -1.14, y: 1.1366667}
       - {x: -1.14, y: -1.1366667}
       - {x: 1.14, y: -1.1366667}
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <minWeight>k__BackingField: 1200
+  <minWeight>k__BackingField: 1200999
   <needs>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: 13f28fe77caf64d4f8c8274c4ee681bc,
       type: 2}

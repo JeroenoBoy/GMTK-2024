@@ -17,6 +17,6 @@ MonoBehaviour:
   <icon>k__BackingField: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   <margin>k__BackingField:
     _min: -10
-    _max: 30
+    _max: 40
   <tooLow>k__BackingField: The people want a better hairstyle
   <tooHigh>k__BackingField: The hair saloons have no customers!

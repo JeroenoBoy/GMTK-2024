@@ -19,4 +19,4 @@ MonoBehaviour:
     _min: 0
     _max: 50
   <tooLow>k__BackingField: There aren't enough books
-  <tooHigh>k__BackingField: There are too much books!
+  <tooHigh>k__BackingField: There are too many books!

@@ -11,6 +11,7 @@ public class notification : MonoBehaviour
     [SerializeField] private TMP_Text _text;
     [SerializeField] private Need _need;
     [SerializeField] private float _duration;
+    [SerializeField] private CanvasGroup _cvg;
 
     private float _timer = 0;
     private bool _didSendEvent;
@@ -47,6 +48,7 @@ public class notification : MonoBehaviour
         }
 
         _bar.fillAmount = _timer * 4f / 3f - 1f / 3f;
+        _cvg.alpha = Mathf.MoveTowards(_cvg.alpha, _timer >= 1 ? 1 : 0, 5f * Time.deltaTime);
     }
 
     private void HandleNeedBalanceRegained(Need need)

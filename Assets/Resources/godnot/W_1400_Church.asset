@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 342a7d4618dd4b3aa09329ee44afd739, type: 3}
-  m_Name: W_2200_Church
+  m_Name: W_1400_Church
   m_EditorClassIdentifier: 
   <message>k__BackingField: I have done so much for the people. Its time they start
     appreciating it. Give them a church for me
@@ -23,4 +23,4 @@ MonoBehaviour:
     - rid: 8539901736068579334
       type: {class: GodWeightCheck, ns: , asm: Assembly-CSharp}
       data:
-        _weight: 2200
+        _weight: 1400

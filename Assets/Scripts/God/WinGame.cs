@@ -8,7 +8,7 @@ public class WinGame : MonoBehaviour
     private bool _canWinGame;
     private bool _wonGame;
     private int _unbalanceCount;
-    private float _winTimer;
+    private float _winTimer = -1f;
 
     private void OnEnable()
     {
@@ -29,7 +29,7 @@ public class WinGame : MonoBehaviour
         if (_wonGame) return;
         if (_winTimer == -1f) return;
         _winTimer -= Time.deltaTime;
-        if (_winTimer <= 0f) return;
+        if (_winTimer > 0f) return;
 
         _wonGame = true;
         EventBus.instance.onGameWon?.Invoke();
@@ -69,5 +69,6 @@ public class WinGame : MonoBehaviour
     private void HandleNeedBalanceRegained(Need need)
     {
         _unbalanceCount--;
+        CheckWin();
     }
 }

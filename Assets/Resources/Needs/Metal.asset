@@ -17,6 +17,6 @@ MonoBehaviour:
   <icon>k__BackingField: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   <margin>k__BackingField:
     _min: 0
-    _max: 10
+    _max: 20
   <tooLow>k__BackingField: We need more metal
   <tooHigh>k__BackingField: We have too much metal
