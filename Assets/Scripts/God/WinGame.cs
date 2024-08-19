@@ -8,6 +8,7 @@ public class WinGame : MonoBehaviour
     private bool _canWinGame;
     private bool _wonGame;
     private int _unbalanceCount;
+    private float _winTimer;
 
     private void OnEnable()
     {
@@ -23,13 +24,33 @@ public class WinGame : MonoBehaviour
         EventBus.instance.onBuildingSettle -= HandleBuildingSettle;
     }
 
+    private void Update()
+    {
+        if (_wonGame) return;
+        if (_winTimer == -1f) return;
+        _winTimer -= Time.deltaTime;
+        if (_winTimer <= 0f) return;
+
+        _wonGame = true;
+        EventBus.instance.onGameWon?.Invoke();
+    }
+
     private void CheckWin()
     {
         if (_wonGame) return;
-        if (!_canWinGame) return;
-        if (_unbalanceCount == 0) return;
-        _wonGame = true;
-        EventBus.instance.onGameWon?.Invoke();
+        if (!_canWinGame) {
+            _winTimer = -1;
+            return;
+        }
+
+        if (_unbalanceCount == 0) {
+            _winTimer = -1;
+            return;
+        }
+
+        if (_winTimer != 1f) {
+            _winTimer = .5f;
+        }
     }
 
     private void HandleBuildingSettle(buildingFalling buildingFalling)
@@ -42,12 +63,10 @@ public class WinGame : MonoBehaviour
     private void HandleNeedUnbalanced(Need need)
     {
         _unbalanceCount++;
-        CheckWin();
     }
 
     private void HandleNeedBalanceRegained(Need need)
     {
         _unbalanceCount--;
-        CheckWin();
     }
 }
