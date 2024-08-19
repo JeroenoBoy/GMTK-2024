@@ -73,6 +73,7 @@ public class GodNotification : MonoBehaviour
             yield return null;
         }
 
+        SoundManager.instance.Play("God");
         yield return new WaitForSeconds(godNotificationData.stayTime);
 
         for (float t = 0; t < 1; t += Time.deltaTime * 3f) {

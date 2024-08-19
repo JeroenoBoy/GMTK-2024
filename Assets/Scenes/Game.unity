@@ -2349,10 +2349,10 @@ MonoBehaviour:
     pitch: 1.59
     _source: {fileID: 0}
     _loop: 0
-  - _name: 
-    _audioClip: {fileID: 0}
-    _vuluom: 0
-    pitch: 0
+  - _name: God
+    _audioClip: {fileID: 8300000, guid: 695013cef7168084a8b9c4c48489ff34, type: 3}
+    _vuluom: 0.8
+    pitch: 1.34
     _source: {fileID: 0}
     _loop: 0
   - _name: 
