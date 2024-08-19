@@ -5,6 +5,7 @@ using JUtils;
 public class EventBus : AutoSingletonBehaviour<EventBus>
 {
     public Action onOutOfBalance;
+    public Action onGameWon;
     public Action<float> onHeightUpdate;
     public Action<float> onGodWeightUpdate;
 
