@@ -17,7 +17,7 @@ public class PLaceBuilding : SingletonBehaviour<PLaceBuilding>
     [SerializeField] private GameObject _parentobject;
     private bool _isClicked = true;
 
-    private float _timer;
+    private float _timer = .5f;
 
     private BoxCollider2D _bC2D;
     private PolygonCollider2D _pC2D;

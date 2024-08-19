@@ -305,15 +305,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <minWeight>k__BackingField: 1000
-  <needs>k__BackingField:
+  <needs>k__BackingField: []
+  <provides>k__BackingField:
+  - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
+      type: 2}
+    <value>k__BackingField:
+      _min: 6
+      _max: 6
   - <need>k__BackingField: {fileID: 11400000, guid: d7f242a98c119e648a438e7452dd7df0,
       type: 2}
     <value>k__BackingField:
       _min: 1
       _max: 2
-  <provides>k__BackingField:
-  - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
-      type: 2}
-    <value>k__BackingField:
-      _min: 4
-      _max: 4
