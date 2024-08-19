@@ -2355,12 +2355,12 @@ MonoBehaviour:
     pitch: 1.34
     _source: {fileID: 0}
     _loop: 0
-  - _name: 
-    _audioClip: {fileID: 0}
-    _vuluom: 0
-    pitch: 0
+  - _name: Construct
+    _audioClip: {fileID: 8300000, guid: 275f7b371dd253c4da106902f860a6ce, type: 3}
+    _vuluom: 0.21
+    pitch: 1.76
     _source: {fileID: 0}
-    _loop: 0
+    _loop: 1
 --- !u!4 &1389574916
 Transform:
   m_ObjectHideFlags: 0

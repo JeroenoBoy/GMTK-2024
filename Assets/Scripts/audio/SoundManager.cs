@@ -25,6 +25,7 @@ public class SoundManager : SingletonBehaviour<SoundManager>
     private void Start()
     {
         Play("Start");
+        Play("Construct");
     }
 
     public void Play(string name)
