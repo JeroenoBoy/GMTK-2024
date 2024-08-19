@@ -61,6 +61,11 @@ MonoBehaviour:
     <value>k__BackingField:
       _min: 10
       _max: 15
+  - <need>k__BackingField: {fileID: 11400000, guid: a55ff40a0584f514d9f423debf1ec9f4,
+      type: 2}
+    <value>k__BackingField:
+      _min: 1
+      _max: 2
 --- !u!212 &-902373836476814859
 SpriteRenderer:
   m_ObjectHideFlags: 0

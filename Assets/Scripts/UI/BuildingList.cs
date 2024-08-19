@@ -27,30 +27,30 @@ public class BuildingList : MonoBehaviour
 
     private void Recalculate()
     {
+        GameObject[] objs = Resources.LoadAll<GameObject>("Buildings");
+
+        if (!_bypass) {
+            float godWeight = God.instance.currentWeight;
+            objs = objs
+               .Select(it => (it, it.GetComponents<NeedProvider>().OrderBy(it => it.minWeight).ToArray()))
+               .Where(it => godWeight >= it.Item2.First().minWeight)
+               .OrderBy(it => it.Item2.First().minWeight)
+               .Select(it => it.it)
+               .ToArray();
+        }
+
+        if (objs.Length == _objects.Count) return;
+
         foreach (GameObject o in _objects) {
             Destroy(o);
         }
 
         _objects.Clear();
 
-        GameObject[] objs = Resources.LoadAll<GameObject>("Buildings");
-        if (_bypass) {
-            foreach (GameObject o in objs) {
-                BuildingWidget instance = Instantiate(_buildingWidget, transform);
-                _objects.Add(instance.gameObject);
-                instance.SetBuilding(o);
-            }
-        } else {
-            float godWeight = God.instance.currentWeight;
-            foreach (GameObject o in objs
-               .Select(it => (it, it.GetComponents<NeedProvider>().OrderBy(it => it.minWeight).ToArray()))
-               .Where(it => godWeight >= it.Item2.First().minWeight)
-               .OrderBy(it => it.Item2.First().minWeight)
-               .Select(it => it.it)) {
-                BuildingWidget instance = Instantiate(_buildingWidget, transform);
-                _objects.Add(instance.gameObject);
-                instance.SetBuilding(o);
-            }
+        foreach (GameObject o in objs) {
+            BuildingWidget instance = Instantiate(_buildingWidget, transform);
+            _objects.Add(instance.gameObject);
+            instance.SetBuilding(o);
         }
     }
 
