@@ -2628,7 +2628,7 @@ MonoBehaviour:
   - type: 1
     need: {fileID: 11400000, guid: eda5e6eb92eccc342a339fe5700f88ec, type: 2}
     amount: 1
-    weight: 2000
+    weight: 2200
 --- !u!114 &1931164975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2675,9 +2675,9 @@ MonoBehaviour:
   _containerLeft: {fileID: 797232939}
   _containerRight: {fileID: 300629798}
   _heightNeed: {fileID: 11400000, guid: 03be8422803df5142a0d2b4b97109830, type: 2}
-  _maxWeightDifference: 100
+  _maxWeightDifference: 200
   <currentHeight>k__BackingField: 0
-  _maxSway: 2
+  _maxSway: 2.5
   _maxAngle: 10
   _wiggleIntensity: 0.5
   _wiggleFrequency: 0.5
