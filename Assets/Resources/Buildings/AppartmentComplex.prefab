@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -820488830670068026}
   - component: {fileID: 2690561263482080950}
   m_Layer: 0
-  m_Name: Mines 1
+  m_Name: AppartmentComplex
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,24 +49,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <minWeight>k__BackingField: 800
-  <needs>k__BackingField:
-  - <need>k__BackingField: {fileID: 11400000, guid: 38cbb18c787f4874497d5fb43cbc3165,
-      type: 2}
-    <value>k__BackingField:
-      _min: 20
-      _max: 28
-  - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
-      type: 2}
-    <value>k__BackingField:
-      _min: 3
-      _max: 6
+  <minWeight>k__BackingField: 900
+  <needs>k__BackingField: []
   <provides>k__BackingField:
-  - <need>k__BackingField: {fileID: 11400000, guid: 8a19a2705be3de74daf563022f78040d,
-      type: 2}
+  - <need>k__BackingField: {fileID: 0}
     <value>k__BackingField:
-      _min: 3
-      _max: 8
+      _min: 0
+      _max: 0
 --- !u!212 &-902373836476814859
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -160,13 +149,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <minWeight>k__BackingField: 1000
-  <needs>k__BackingField: []
+  <needs>k__BackingField:
+  - <need>k__BackingField: {fileID: 11400000, guid: 8a19a2705be3de74daf563022f78040d,
+      type: 2}
+    <value>k__BackingField:
+      _min: 1
+      _max: 2
+  - <need>k__BackingField: {fileID: 11400000, guid: be86d3bcc02692946aea18fdd6755cfe,
+      type: 2}
+    <value>k__BackingField:
+      _min: 1
+      _max: 2
   <provides>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: d7f242a98c119e648a438e7452dd7df0,
       type: 2}
     <value>k__BackingField:
-      _min: 3
-      _max: 5
+      _min: 5
+      _max: 8
+  - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
+      type: 2}
+    <value>k__BackingField:
+      _min: 13
+      _max: 15
 --- !u!60 &2690561263482080950
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -211,10 +215,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.37114894, y: 1.1160592}
-      - {x: 0.3701167, y: 0.4134302}
-      - {x: -0.35670617, y: 0.39636645}
-      - {x: -0.3518323, y: 1.1271963}
+    - - {x: 0.391842, y: 1.1419494}
+      - {x: 0.385652, y: 0.4031023}
+      - {x: -0.37219417, y: 0.40151516}
+      - {x: -0.3724787, y: 1.1323119}
       - {x: -1.14, y: 1.1366667}
       - {x: -1.14, y: -1.1366667}
       - {x: 1.14, y: -1.1366667}
