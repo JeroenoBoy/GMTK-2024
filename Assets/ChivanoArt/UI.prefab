@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _transform: {fileID: 5031815503969088558}
-  _degreesMax: -85
+  _degreesMax: 85
   _image: {fileID: 4244474418746996604}
   _imageGradient:
     serializedVersion: 2
