@@ -2358,7 +2358,7 @@ MonoBehaviour:
   - _name: Win
     _audioClip: {fileID: 8300000, guid: e18b6424f4ab53d4f990f43966e142d7, type: 3}
     _vuluom: 0.21
-    pitch: 1.76
+    pitch: 1.07
     _source: {fileID: 0}
     _loop: 1
   - _name: Construct
