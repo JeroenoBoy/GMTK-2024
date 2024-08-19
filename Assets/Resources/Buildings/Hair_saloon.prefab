@@ -65,8 +65,8 @@ MonoBehaviour:
   - <need>k__BackingField: {fileID: 11400000, guid: d9ab2fcf0baff6d4cac3def1d3869365,
       type: 2}
     <value>k__BackingField:
-      _min: 3
-      _max: 5
+      _min: 20
+      _max: 25
 --- !u!212 &-902373836476814859
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <minWeight>k__BackingField: 700
+  <minWeight>k__BackingField: 1000
   <needs>k__BackingField: []
   <provides>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: d7f242a98c119e648a438e7452dd7df0,

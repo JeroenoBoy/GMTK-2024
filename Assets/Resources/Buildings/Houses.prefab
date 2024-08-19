@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 8893171504633741585}
   - component: {fileID: 1912553247980302269}
   - component: {fileID: 6881012961031492416}
+  - component: {fileID: -2682158210041592423}
   - component: {fileID: -277786246009156681}
   m_Layer: 0
   m_Name: Houses
@@ -192,16 +193,6 @@ MonoBehaviour:
     <value>k__BackingField:
       _min: 5
       _max: 8
-  - <need>k__BackingField: {fileID: 11400000, guid: d7f242a98c119e648a438e7452dd7df0,
-      type: 2}
-    <value>k__BackingField:
-      _min: 1
-      _max: 2
-  - <need>k__BackingField: {fileID: 11400000, guid: be86d3bcc02692946aea18fdd6755cfe,
-      type: 2}
-    <value>k__BackingField:
-      _min: 5
-      _max: 8
 --- !u!114 &-8071498275448605343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,8 +290,28 @@ MonoBehaviour:
   - <need>k__BackingField: {fileID: 11400000, guid: d9ab2fcf0baff6d4cac3def1d3869365,
       type: 2}
     <value>k__BackingField:
-      _min: 0
-      _max: 0
+      _min: 2
+      _max: 3
+  <provides>k__BackingField: []
+--- !u!114 &-2682158210041592423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304382771576342832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <minWeight>k__BackingField: 1000
+  <needs>k__BackingField:
+  - <need>k__BackingField: {fileID: 11400000, guid: d7f242a98c119e648a438e7452dd7df0,
+      type: 2}
+    <value>k__BackingField:
+      _min: 1
+      _max: 2
   <provides>k__BackingField: []
 --- !u!114 &-277786246009156681
 MonoBehaviour:
