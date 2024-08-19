@@ -18,6 +18,7 @@ public class God : BalancingContainer, ISingleton<God>
     private List<Need> _unbalancedNeeds = new();
     private int _spawnCount;
     private float _spawnTimer;
+    private bool _gameEnded;
 
     private void Awake()
     {
@@ -35,12 +36,16 @@ public class God : BalancingContainer, ISingleton<God>
     {
         EventBus.instance.onNeedBalanceParienceLost += HandlePatienceLost;
         EventBus.instance.onNeedBalanceRegained += HandleBalanceRegained;
+        EventBus.instance.onGameWon += HandleGameEnded;
+        EventBus.instance.onOutOfBalance += HandleGameEnded;
     }
 
     private void OnDisable()
     {
         EventBus.instance.onNeedBalanceParienceLost -= HandlePatienceLost;
         EventBus.instance.onNeedBalanceRegained -= HandleBalanceRegained;
+        EventBus.instance.onGameWon -= HandleGameEnded;
+        EventBus.instance.onOutOfBalance -= HandleGameEnded;
     }
 
     private void Start()
@@ -50,6 +55,7 @@ public class God : BalancingContainer, ISingleton<God>
 
     private void Update()
     {
+        if (_gameEnded) return;
         _spawnTimer -= Time.deltaTime * _unbalanceSpawnMulti.Evaluate(_unbalancedNeeds.Count);
         if (_spawnTimer > 0) return;
         _spawnTimer += _spawnInterval;
@@ -80,5 +86,10 @@ public class God : BalancingContainer, ISingleton<God>
     private void HandleBalanceRegained(Need need)
     {
         _unbalancedNeeds.Remove(need);
+    }
+
+    private void HandleGameEnded()
+    {
+        _gameEnded = true;
     }
 }
