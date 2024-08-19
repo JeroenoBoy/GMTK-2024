@@ -1818,10 +1818,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 63859099587159113, guid: 0329936a70f41b34294b3b48200fe1c1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2303641474240066486, guid: 0329936a70f41b34294b3b48200fe1c1,
         type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778887064828361519, guid: 0329936a70f41b34294b3b48200fe1c1,
+        type: 3}
+      propertyPath: m_ScrollSensitivity
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8354330775023143666, guid: 0329936a70f41b34294b3b48200fe1c1,
         type: 3}
@@ -2615,27 +2625,27 @@ MonoBehaviour:
   - type: 1
     need: {fileID: 11400000, guid: 38cbb18c787f4874497d5fb43cbc3165, type: 2}
     amount: 10
-    weight: 500
+    weight: 600
   - type: 1
     need: {fileID: 11400000, guid: d9ab2fcf0baff6d4cac3def1d3869365, type: 2}
     amount: 10
-    weight: 600
+    weight: 800
   - type: 1
     need: {fileID: 11400000, guid: d7f242a98c119e648a438e7452dd7df0, type: 2}
     amount: 30
-    weight: 700
+    weight: 1000
   - type: 1
     need: {fileID: 11400000, guid: 13f28fe77caf64d4f8c8274c4ee681bc, type: 2}
     amount: 10
-    weight: 800
+    weight: 1200
   - type: 1
     need: {fileID: 11400000, guid: 5564461221e1841419910fdb0a666754, type: 2}
     amount: 1
-    weight: 900
+    weight: 1400
   - type: 1
     need: {fileID: 11400000, guid: eda5e6eb92eccc342a339fe5700f88ec, type: 2}
     amount: 1
-    weight: 1100
+    weight: 1600
 --- !u!1 &1968770939
 GameObject:
   m_ObjectHideFlags: 0

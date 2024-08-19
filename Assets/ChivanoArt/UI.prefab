@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 63859099587159113}
   - component: {fileID: 6178656644644868195}
   - component: {fileID: 69458610867772436}
+  - component: {fileID: 3154595799689029215}
   m_Layer: 5
   m_Name: Horizontal Content fitter
   m_TagString: Untagged
@@ -272,6 +273,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _buildingWidget: {fileID: 7252244600154320373, guid: 86e7845cb3d67614f95880c3cb94d34c,
     type: 3}
+--- !u!114 &3154595799689029215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3613210211041933670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 0
 --- !u!1 &7828290084301415050
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,7 +383,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 10
   m_Viewport: {fileID: 0}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 0}

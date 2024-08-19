@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <minWeight>k__BackingField: 500
+  <minWeight>k__BackingField: 600
   <needs>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: 38cbb18c787f4874497d5fb43cbc3165,
       type: 2}
@@ -289,9 +289,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <minWeight>k__BackingField: 600
+  <minWeight>k__BackingField: 800
   <needs>k__BackingField:
-  - <need>k__BackingField: {fileID: 0}
+  - <need>k__BackingField: {fileID: 11400000, guid: d9ab2fcf0baff6d4cac3def1d3869365,
+      type: 2}
     <value>k__BackingField:
       _min: 0
       _max: 0
@@ -308,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <minWeight>k__BackingField: 800
+  <minWeight>k__BackingField: 1200
   <needs>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: 13f28fe77caf64d4f8c8274c4ee681bc,
       type: 2}
