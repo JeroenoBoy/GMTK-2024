@@ -334,7 +334,7 @@ Transform:
   m_GameObject: {fileID: 300629796}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: 7.5, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -906,7 +906,7 @@ Transform:
   m_GameObject: {fileID: 413215157}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.71, y: 0.56, z: 0}
+  m_LocalPosition: {x: 10.71, y: 0.56, z: 0}
   m_LocalScale: {x: 1.8344, y: 1.8344, z: 1.8344}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1390,7 +1390,7 @@ Transform:
   m_GameObject: {fileID: 797232937}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.5, y: 2.03, z: 0}
+  m_LocalPosition: {x: -7.5, y: 2.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1790,13 +1790,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002627689}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 1, z: 10}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1002627694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2098,8 +2098,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 701624220}
-  - {fileID: 300629797}
   - {fileID: 797232938}
+  - {fileID: 300629797}
   m_Father: {fileID: 1968770941}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1193503295
@@ -2628,7 +2628,7 @@ MonoBehaviour:
   - type: 1
     need: {fileID: 11400000, guid: eda5e6eb92eccc342a339fe5700f88ec, type: 2}
     amount: 1
-    weight: 2000
+    weight: 2200
 --- !u!114 &1931164975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2672,12 +2672,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _directParent: {fileID: 1150822211}
-  _containerLeft: {fileID: 797232939}
-  _containerRight: {fileID: 300629798}
+  _containerLeft: {fileID: 300629798}
+  _containerRight: {fileID: 797232939}
   _heightNeed: {fileID: 11400000, guid: 03be8422803df5142a0d2b4b97109830, type: 2}
-  _maxWeightDifference: 100
+  _maxWeightDifference: 200
   <currentHeight>k__BackingField: 0
-  _maxSway: 2
+  _maxSway: 2.5
   _maxAngle: 10
   _wiggleIntensity: 0.5
   _wiggleFrequency: 0.5

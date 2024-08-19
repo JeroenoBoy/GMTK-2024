@@ -17,6 +17,6 @@ MonoBehaviour:
   <icon>k__BackingField: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   <margin>k__BackingField:
     _min: 0
-    _max: 1e+11
+    _max: 9999
   <tooLow>k__BackingField: God wants a church
   <tooHigh>k__BackingField: 

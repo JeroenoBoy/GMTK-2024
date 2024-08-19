@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 342a7d4618dd4b3aa09329ee44afd739, type: 3}
   m_Name: W_1600_Mall
   m_EditorClassIdentifier: 
-  <message>k__BackingField: People like
+  <message>k__BackingField: All these individual buidings are inefficient. Lets put
+    them together in a big mall!
   <stayTime>k__BackingField: 5
   <notificationCheck>k__BackingField:
     rid: 8539901736068579334
