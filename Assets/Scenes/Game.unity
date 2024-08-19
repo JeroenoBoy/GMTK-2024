@@ -2624,11 +2624,11 @@ MonoBehaviour:
   - type: 1
     need: {fileID: 11400000, guid: 5564461221e1841419910fdb0a666754, type: 2}
     amount: 1
-    weight: 1400
+    weight: 1600
   - type: 1
     need: {fileID: 11400000, guid: eda5e6eb92eccc342a339fe5700f88ec, type: 2}
     amount: 1
-    weight: 1600
+    weight: 2000
 --- !u!114 &1931164975
 MonoBehaviour:
   m_ObjectHideFlags: 0
