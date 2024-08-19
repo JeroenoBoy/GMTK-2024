@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b83defba24741469575a626a5af79a3, type: 3}
   m_Name: Happyness
   m_EditorClassIdentifier: 
-  <name>k__BackingField: Happyness
+  <name>k__BackingField: Happiness
   <color>k__BackingField: {r: 1, g: 0.9625612, b: 0.3679244, a: 1}
   <icon>k__BackingField: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   <margin>k__BackingField:
