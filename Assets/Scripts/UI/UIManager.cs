@@ -40,6 +40,8 @@ namespace DefaultNamespace.UI
         {
             if (_gameWon) return;
             _gameLost = true;
+            SoundManager.instance.End("Start");
+            SoundManager.instance.Play("Faal");
             _gameOverScreen.SetActive(true);
         }
 
