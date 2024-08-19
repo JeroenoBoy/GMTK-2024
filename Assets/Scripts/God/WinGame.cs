@@ -43,7 +43,7 @@ public class WinGame : MonoBehaviour
             return;
         }
 
-        if (_unbalanceCount == 0) {
+        if (_unbalanceCount > 0) {
             _winTimer = -1;
             return;
         }
@@ -63,6 +63,7 @@ public class WinGame : MonoBehaviour
     private void HandleNeedUnbalanced(Need need)
     {
         _unbalanceCount++;
+        CheckWin();
     }
 
     private void HandleNeedBalanceRegained(Need need)

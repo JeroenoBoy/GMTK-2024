@@ -70,12 +70,12 @@ MonoBehaviour:
     <value>k__BackingField:
       _min: 10
       _max: 20
+  <provides>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: eda5e6eb92eccc342a339fe5700f88ec,
       type: 2}
     <value>k__BackingField:
       _min: 1
       _max: 1
-  <provides>k__BackingField: []
 --- !u!212 &-902373836476814859
 SpriteRenderer:
   m_ObjectHideFlags: 0

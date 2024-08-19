@@ -44,6 +44,7 @@ public class NeedProvider : MonoBehaviour
         if (!_didProvide) return;
 
         NeedManager needManager = NeedManager.instance;
+        if (needManager == null) return;
 
         for (int i = 0; i < needs.Length; i++) {
             NeedPair pair = needs[i];

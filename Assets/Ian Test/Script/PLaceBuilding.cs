@@ -88,25 +88,19 @@ public class PLaceBuilding : SingletonBehaviour<PLaceBuilding>
 
         transform.position = _worldPostion;
         _timer -= Time.deltaTime;
-        if (transform.position.x < _xNoClickDistance)
-        {
+        if (transform.position.x > _xNoClickDistance) {
             if (_timer < 0f) {
                 if (_isClicked) {
                     _timer = .5f;
-               
-                    if (!_kanNietPlaatssen)
-                    {
 
+                    if (!_kanNietPlaatssen) {
                         GameObject building = Instantiate(_sellectedObject, _worldPostion, Quaternion.Euler(0, 0, 0), _parentobject.transform);
                         building.AddComponent<buildingFalling>().prefab = _sellectedObject;
                         building.AddComponent<Rigidbody2D>();
                     }
                 }
-                
             }
-        }
-        else
-        {
+        } else {
             _sR.color = Color.red;
         }
 
