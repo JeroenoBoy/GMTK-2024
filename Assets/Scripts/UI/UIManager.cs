@@ -50,6 +50,9 @@ namespace DefaultNamespace.UI
         {
             if (_gameLost) return;
             _gameWon = true;
+            SoundManager.instance.End("Start");
+            SoundManager.instance.End("Construct");
+            SoundManager.instance.Play("Win");
             _gameWonScreen.SetActive(true);
         }
     }
