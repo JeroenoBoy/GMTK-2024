@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <message>k__BackingField: Great! Now show the people my greatness, balance out
     all the needs!
-  <stayTime>k__BackingField: 5
+  <stayTime>k__BackingField: 6e+23
   <notificationCheck>k__BackingField:
     rid: 8539901756849520640
   references:
