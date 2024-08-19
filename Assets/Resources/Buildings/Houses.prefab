@@ -312,7 +312,12 @@ MonoBehaviour:
     <value>k__BackingField:
       _min: 1
       _max: 2
-  <provides>k__BackingField: []
+  <provides>k__BackingField:
+  - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
+      type: 2}
+    <value>k__BackingField:
+      _min: 3
+      _max: 0
 --- !u!114 &-277786246009156681
 MonoBehaviour:
   m_ObjectHideFlags: 0

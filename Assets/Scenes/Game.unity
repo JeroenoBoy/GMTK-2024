@@ -2625,7 +2625,7 @@ MonoBehaviour:
     need: {fileID: 11400000, guid: d9ab2fcf0baff6d4cac3def1d3869365, type: 2}
     amount: 10
     weight: 800
-  - type: 1
+  - type: 0
     need: {fileID: 11400000, guid: d7f242a98c119e648a438e7452dd7df0, type: 2}
     amount: 30
     weight: 1000

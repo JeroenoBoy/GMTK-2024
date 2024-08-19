@@ -9,14 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7389337525336173845}
-  - component: {fileID: -2484751406630793374}
   - component: {fileID: -902373836476814859}
   - component: {fileID: 7236939815380922146}
   - component: {fileID: 3024819473392389746}
   - component: {fileID: -820488830670068026}
   - component: {fileID: 2690561263482080950}
+  - component: {fileID: -9133077425653870890}
   m_Layer: 0
-  m_Name: AppartmentComplex
+  m_Name: People_Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,25 +37,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-2484751406630793374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3304382771576342832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <minWeight>k__BackingField: 900
-  <needs>k__BackingField: []
-  <provides>k__BackingField:
-  - <need>k__BackingField: {fileID: 0}
-    <value>k__BackingField:
-      _min: 0
-      _max: 0
 --- !u!212 &-902373836476814859
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -160,6 +141,26 @@ MonoBehaviour:
     <value>k__BackingField:
       _min: 1
       _max: 2
+  - <need>k__BackingField: {fileID: 11400000, guid: d9ab2fcf0baff6d4cac3def1d3869365,
+      type: 2}
+    <value>k__BackingField:
+      _min: 1
+      _max: 2
+  - <need>k__BackingField: {fileID: 11400000, guid: 67fe99a7b984ada45a9723fc625a49ac,
+      type: 2}
+    <value>k__BackingField:
+      _min: 1
+      _max: 2
+  - <need>k__BackingField: {fileID: 11400000, guid: 68c8032aded13c74db0569dcb7f9a6c5,
+      type: 2}
+    <value>k__BackingField:
+      _min: 3
+      _max: 5
+  - <need>k__BackingField: {fileID: 11400000, guid: a55ff40a0584f514d9f423debf1ec9f4,
+      type: 2}
+    <value>k__BackingField:
+      _min: 3
+      _max: 5
   <provides>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: d7f242a98c119e648a438e7452dd7df0,
       type: 2}
@@ -224,3 +225,23 @@ PolygonCollider2D:
       - {x: 1.14, y: -1.1366667}
       - {x: 1.14, y: 1.1366667}
   m_UseDelaunayMesh: 0
+--- !u!114 &-9133077425653870890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304382771576342832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <minWeight>k__BackingField: 1200
+  <needs>k__BackingField:
+  - <need>k__BackingField: {fileID: 11400000, guid: 13f28fe77caf64d4f8c8274c4ee681bc,
+      type: 2}
+    <value>k__BackingField:
+      _min: 1
+      _max: 2
+  <provides>k__BackingField: []
