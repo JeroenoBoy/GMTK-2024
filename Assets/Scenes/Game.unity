@@ -1828,11 +1828,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
-    - target: {fileID: 4778887064828361519, guid: 0329936a70f41b34294b3b48200fe1c1,
-        type: 3}
-      propertyPath: m_ScrollSensitivity
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 8354330775023143666, guid: 0329936a70f41b34294b3b48200fe1c1,
         type: 3}
       propertyPath: m_Pivot.x
