@@ -334,7 +334,7 @@ Transform:
   m_GameObject: {fileID: 300629796}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: 7.5, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -906,7 +906,7 @@ Transform:
   m_GameObject: {fileID: 413215157}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.71, y: 0.56, z: 0}
+  m_LocalPosition: {x: 10.71, y: 0.56, z: 0}
   m_LocalScale: {x: 1.8344, y: 1.8344, z: 1.8344}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1390,7 +1390,7 @@ Transform:
   m_GameObject: {fileID: 797232937}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.5, y: 2.03, z: 0}
+  m_LocalPosition: {x: -7.5, y: 2.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1790,13 +1790,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002627689}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 1, z: 10}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1002627694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2098,8 +2098,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 701624220}
-  - {fileID: 300629797}
   - {fileID: 797232938}
+  - {fileID: 300629797}
   m_Father: {fileID: 1968770941}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1193503295
@@ -2312,16 +2312,16 @@ MonoBehaviour:
     _vuluom: 0.52
     pitch: 1.16
     _source: {fileID: 0}
-    _loop: 0
+    _loop: 1
   - _name: Place
     _audioClip: {fileID: 8300000, guid: 7e4cffbc3b925fc45b0b7fe9a9924606, type: 3}
-    _vuluom: 1
+    _vuluom: 0.32
     pitch: 1.76
     _source: {fileID: 0}
     _loop: 0
   - _name: Selecated
     _audioClip: {fileID: 8300000, guid: 3cde22925c8563647a7965b544efce0c, type: 3}
-    _vuluom: 0.84
+    _vuluom: 0.74
     pitch: 1.37
     _source: {fileID: 0}
     _loop: 0
@@ -2339,28 +2339,28 @@ MonoBehaviour:
     _loop: 0
   - _name: notivacation3
     _audioClip: {fileID: 8300000, guid: a5ace95d8e01d8646bf519bfad886d87, type: 3}
-    _vuluom: 0.49
+    _vuluom: 0.3
     pitch: 1.61
     _source: {fileID: 0}
     _loop: 0
   - _name: fall
     _audioClip: {fileID: 8300000, guid: 3b9c45752e2b0a24db9dab2c614035af, type: 3}
-    _vuluom: 0.43
+    _vuluom: 0.05
     pitch: 1.59
     _source: {fileID: 0}
     _loop: 0
-  - _name: 
-    _audioClip: {fileID: 0}
-    _vuluom: 0
-    pitch: 0
+  - _name: God
+    _audioClip: {fileID: 8300000, guid: 695013cef7168084a8b9c4c48489ff34, type: 3}
+    _vuluom: 0.8
+    pitch: 1.34
     _source: {fileID: 0}
     _loop: 0
-  - _name: 
-    _audioClip: {fileID: 0}
-    _vuluom: 0
-    pitch: 0
+  - _name: Construct
+    _audioClip: {fileID: 8300000, guid: 275f7b371dd253c4da106902f860a6ce, type: 3}
+    _vuluom: 0.21
+    pitch: 1.76
     _source: {fileID: 0}
-    _loop: 0
+    _loop: 1
 --- !u!4 &1389574916
 Transform:
   m_ObjectHideFlags: 0
@@ -2672,8 +2672,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _directParent: {fileID: 1150822211}
-  _containerLeft: {fileID: 797232939}
-  _containerRight: {fileID: 300629798}
+  _containerLeft: {fileID: 300629798}
+  _containerRight: {fileID: 797232939}
   _heightNeed: {fileID: 11400000, guid: 03be8422803df5142a0d2b4b97109830, type: 2}
   _maxWeightDifference: 200
   <currentHeight>k__BackingField: 0

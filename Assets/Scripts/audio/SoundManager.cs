@@ -25,6 +25,7 @@ public class SoundManager : SingletonBehaviour<SoundManager>
     private void Start()
     {
         Play("Start");
+        Play("Construct");
     }
 
     public void Play(string name)
@@ -32,5 +33,12 @@ public class SoundManager : SingletonBehaviour<SoundManager>
         Sound s = Array.Find(_sounds, sound => sound._name == name);
         if (s == null) return;
         s._source.Play();
+    }
+
+    public void End(string name)
+    {
+        Sound s = Array.Find(_sounds, sound => sound._name == name);
+        if (s == null) return;
+        s._source.Stop();
     }
 }

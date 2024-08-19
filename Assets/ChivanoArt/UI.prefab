@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cdd05935c044685aacf4da1fbd6b51f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _side: 1
+  _side: -1
   _margin: 0.2
   _obj: {fileID: 0}
   _canvasGroup: {fileID: 7193269466264534864}
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _transform: {fileID: 5031815503969088558}
-  _degreesMax: -85
+  _degreesMax: 85
   _image: {fileID: 4244474418746996604}
   _imageGradient:
     serializedVersion: 2
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cdd05935c044685aacf4da1fbd6b51f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _side: -1
+  _side: 1
   _margin: 0.2
   _obj: {fileID: 0}
   _canvasGroup: {fileID: 2006822523804393}

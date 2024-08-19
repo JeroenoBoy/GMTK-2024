@@ -170,8 +170,8 @@ MonoBehaviour:
   - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
       type: 2}
     <value>k__BackingField:
-      _min: 13
-      _max: 15
+      _min: 20
+      _max: 25
 --- !u!60 &2690561263482080950
 PolygonCollider2D:
   m_ObjectHideFlags: 0
