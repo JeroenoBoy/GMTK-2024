@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25da8b2df7b34620acd62b39c0901533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <minWeight>k__BackingField: 1400
+  <minWeight>k__BackingField: 1600
   <needs>k__BackingField:
   - <need>k__BackingField: {fileID: 11400000, guid: e88a5d7ff08023f439edd4e29e64da64,
       type: 2}
@@ -86,6 +86,11 @@ MonoBehaviour:
     <value>k__BackingField:
       _min: 20
       _max: 30
+  - <need>k__BackingField: {fileID: 11400000, guid: 5564461221e1841419910fdb0a666754,
+      type: 2}
+    <value>k__BackingField:
+      _min: 1
+      _max: 1
 --- !u!212 &-902373836476814859
 SpriteRenderer:
   m_ObjectHideFlags: 0
